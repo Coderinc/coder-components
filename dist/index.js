@@ -74,9 +74,12 @@ var _RequirementBar = require('./components/RequirementBar');
 
 var _RequirementBar2 = _interopRequireDefault(_RequirementBar);
 
+var _Select = require('./components/Select');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = {
+  SingleSelect: _Select.SingleSelect,
   Avatar: _Avatar2.default,
   ProgressBar: _ProgressBar2.default,
   PhaseBar: _PhaseBar2.default,
@@ -96,5 +99,6 @@ module.exports = {
   IconChip: _IconChip2.default,
   Tile: _Tile2.default,
   Slider: _Slider.Slider,
-  RangeSlider: _Slider.RangeSlider
+  RangeSlider: _Slider.RangeSlider,
+  MultiSelect: _Select.MultiSelect
 };

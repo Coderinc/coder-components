@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.PhaseBar = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\n  background-color: ', ';\n  color: ', ';\n\n  display: flex;\n  align-items: center;\n\n  box-sizing: border-box;\n  width: 100%;\n  padding: 0.5rem;\n  border-radius: 0.25rem;\n\n  &::before {\n    font-size: 1.5rem;\n    font-family: coder-icons;\n    font-weight: normal;\n    content: \'\f108\';\n    margin-right: 0.5rem;\n  }\n'], ['\n  background-color: ', ';\n  color: ', ';\n\n  display: flex;\n  align-items: center;\n\n  box-sizing: border-box;\n  width: 100%;\n  padding: 0.5rem;\n  border-radius: 0.25rem;\n\n  &::before {\n    font-size: 1.5rem;\n    font-family: coder-icons;\n    font-weight: normal;\n    content: \'\\f108\';\n    margin-right: 0.5rem;\n  }\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  background-color: ', ';\n  color: ', ';\n\n  display: flex;\n  align-items: center;\n\n  box-sizing: border-box;\n  width: 100%;\n  margin: 0.25rem 0;\n  padding: 0.5rem;\n  border-radius: 0.25rem;\n\n  &::before {\n    font-size: 1.5rem;\n    font-family: coder-icons;\n    font-weight: normal;\n    content: \'\f108\';\n    margin-right: 0.5rem;\n  }\n'], ['\n  background-color: ', ';\n  color: ', ';\n\n  display: flex;\n  align-items: center;\n\n  box-sizing: border-box;\n  width: 100%;\n  margin: 0.25rem 0;\n  padding: 0.5rem;\n  border-radius: 0.25rem;\n\n  &::before {\n    font-size: 1.5rem;\n    font-family: coder-icons;\n    font-weight: normal;\n    content: \'\\f108\';\n    margin-right: 0.5rem;\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  flex: 1;\n'], ['\n  flex: 1;\n']);
 
 var _react = require('react');
@@ -31,7 +31,7 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var BarContainer = _styledComponents2.default.div(_templateObject, function (props) {
-  return props.active ? props.theme.activeBackground : props.theme.primaryBackground;
+  return props.active ? props.theme.activeBackground : props.theme.offsetBackground;
 }, function (props) {
   return props.theme.primaryFont;
 });
