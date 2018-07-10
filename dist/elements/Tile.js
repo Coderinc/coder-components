@@ -53,7 +53,10 @@ var Tile = exports.Tile = function Tile(props) {
       props.icon && _react2.default.createElement(
         TileIcon,
         null,
-        _react2.default.createElement('img', { src: props.icon, alt: 'Icon' })
+        _react2.default.createElement('img', {
+          alt: 'Icon',
+          src: props.icon
+        })
       ),
       _react2.default.createElement(
         TextContainer,

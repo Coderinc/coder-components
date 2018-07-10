@@ -138,13 +138,13 @@ var ThemelessRangeSlider = function (_React$Component) {
       });
 
       return _react2.default.createElement(_rcSlider2.default.Range, _extends({
-        style: { margin: '1rem 0' },
-        min: minValue,
-        max: maxValue,
-        marks: marks,
-        step: null,
-        onChange: input.onChange,
         defaultValue: input.value || [],
+        marks: marks,
+        max: maxValue,
+        min: minValue,
+        onChange: input.onChange,
+        step: null,
+        style: { margin: '1rem 0' },
         value: input.value
       }, rangeSliderStyle(theme)));
     }
@@ -201,13 +201,13 @@ var ThemelessSlider = function (_React$Component2) {
       });
 
       return _react2.default.createElement(_rcSlider2.default, _extends({
-        style: { margin: '1rem 0' },
-        min: minValue,
-        max: maxValue,
-        marks: marks,
-        step: null,
-        onChange: input.onChange,
         defaultValue: input.value || minValue,
+        marks: marks,
+        max: maxValue,
+        min: minValue,
+        onChange: input.onChange,
+        step: null,
+        style: { margin: '1rem 0' },
         value: input.value
       }, sliderStyle(theme)));
     }

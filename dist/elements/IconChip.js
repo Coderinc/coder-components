@@ -35,7 +35,10 @@ var IconChip = function IconChip(_ref) {
   return _react2.default.createElement(
     ChipWrapper,
     props,
-    _react2.default.createElement('img', { src: icon, alt: 'Icon' }),
+    _react2.default.createElement('img', {
+      alt: 'Icon',
+      src: icon
+    }),
     label
   );
 };

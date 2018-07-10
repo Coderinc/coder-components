@@ -60,7 +60,10 @@ var SingleValue = function SingleValue(props) {
     _react2.default.createElement(
       SingleValueContainer,
       null,
-      props.data.icon && _react2.default.createElement('img', { src: props.data.icon, alt: 'Icon' }),
+      props.data.icon && _react2.default.createElement('img', {
+        alt: 'Icon',
+        src: props.data.icon
+      }),
       _react2.default.createElement(
         'span',
         null,
@@ -81,7 +84,10 @@ var Placeholder = function Placeholder(props) {
     _react2.default.createElement(
       PlaceholderContainer,
       null,
-      props.icon && _react2.default.createElement('img', { src: props.icon, alt: 'Icon' }),
+      props.icon && _react2.default.createElement('img', {
+        alt: 'Icon',
+        src: props.icon
+      }),
       _react2.default.createElement(
         'span',
         null,
@@ -102,7 +108,10 @@ var Option = function Option(props) {
     _react2.default.createElement(
       OptionContainer,
       null,
-      props.data.icon && _react2.default.createElement('img', { src: props.data.icon, alt: 'Icon' }),
+      props.data.icon && _react2.default.createElement('img', {
+        alt: 'Icon',
+        src: props.data.icon
+      }),
       _react2.default.createElement(
         'span',
         null,
@@ -121,7 +130,10 @@ var MultiValueLabel = function MultiValueLabel(props) {
     _react2.default.createElement(
       MultiValueLabelContainer,
       null,
-      props.icon && _react2.default.createElement('img', { src: props.icon, alt: 'Icon' }),
+      props.icon && _react2.default.createElement('img', {
+        alt: 'Icon',
+        src: props.icon
+      }),
       _react2.default.createElement(
         'span',
         null,
@@ -252,13 +264,13 @@ var ThemelessSingleSelect = function ThemelessSingleSelect(_ref) {
       props = _objectWithoutProperties(_ref, ['theme']);
 
   return _react2.default.createElement(_reactSelect2.default, _extends({}, props, {
-    styles: themer(theme),
     components: {
       DropdownIndicator: DropdownIndicator,
       SingleValue: SingleValue,
       Option: Option,
       Placeholder: Placeholder
-    }
+    },
+    styles: themer(theme)
   }));
 };
 
@@ -268,13 +280,13 @@ var ThemelessMultiSelect = function ThemelessMultiSelect(_ref2) {
       props = _objectWithoutProperties(_ref2, ['theme']);
 
   return _react2.default.createElement(_reactSelect2.default, _extends({}, props, {
-    isMulti: true,
-    styles: themer(theme),
     components: {
       DropdownIndicator: DropdownIndicator,
       Option: Option,
       MultiValue: MultiValue
-    }
+    },
+    isMulti: true,
+    styles: themer(theme)
   }));
 };
 

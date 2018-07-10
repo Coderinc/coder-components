@@ -82,7 +82,10 @@ var RequirementBar = function RequirementBar(_ref) {
         BarBottom,
         null,
         phases.map(function (p) {
-          return _react2.default.createElement(_Chip2.default, { key: p, label: p });
+          return _react2.default.createElement(_Chip2.default, {
+            key: p,
+            label: p
+          });
         })
       )
     )
