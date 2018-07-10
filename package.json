@@ -1,6 +1,6 @@
 {
   "name": "coder-components",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A library of components for the Coder Platform",
   "main": "dist/index.js",
   "scripts": {
@@ -10,8 +10,8 @@
     "lint:watch": "esw -w lib/**",
     "prepublish": "npm run build"
   },
-  "author": "Jay Honnold",
-  "license": "ISC",
+  "author": "Jay Honnold <jay@builtbycoder.com>",
+  "license": "3-Clause BSD",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
