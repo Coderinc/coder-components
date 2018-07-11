@@ -92,10 +92,16 @@ const Button = ({ label, ...props }) => (
 
 Button.propTypes = {
   label: PropTypes.string,
+  secondary: PropTypes.bool,
+  ternary: PropTypes.bool,
+  color: PropTypes.string,
 };
 
 Button.defaultProps = {
   label: 'Click',
+  secondary: false,
+  ternary: false,
+  color: 'primary',
 };
 
 export default Button;

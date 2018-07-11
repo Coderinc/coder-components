@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  margin: 0 auto;\n  width: 100%;\n  max-height: 100%;\n  max-width: ', ';\n'], ['\n  box-sizing: border-box;\n  margin: 0 auto;\n  width: 100%;\n  max-height: 100%;\n  max-width: ', ';\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  box-sizing: border-box;\n  margin: 0 auto;\n  padding: 1rem;\n  width: 100%;\n  max-height: 100%;\n  max-width: ', ';\n'], ['\n  box-sizing: border-box;\n  margin: 0 auto;\n  padding: 1rem;\n  width: 100%;\n  max-height: 100%;\n  max-width: ', ';\n']);
 
 var _propTypes = require('prop-types');
 

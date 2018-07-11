@@ -103,11 +103,17 @@ var Button = function Button(_ref13) {
 };
 
 Button.propTypes = {
-  label: _propTypes2.default.string
+  label: _propTypes2.default.string,
+  secondary: _propTypes2.default.bool,
+  ternary: _propTypes2.default.bool,
+  color: _propTypes2.default.string
 };
 
 Button.defaultProps = {
-  label: 'Click'
+  label: 'Click',
+  secondary: false,
+  ternary: false,
+  color: 'primary'
 };
 
 exports.default = Button;
