@@ -60,6 +60,14 @@ var _Tile = require('./elements/Tile');
 
 var _Tile2 = _interopRequireDefault(_Tile);
 
+var _TextInput = require('./elements/TextInput');
+
+var _TextInput2 = _interopRequireDefault(_TextInput);
+
+var _Tooltip = require('./elements/Tooltip');
+
+var _Tooltip2 = _interopRequireDefault(_Tooltip);
+
 var _AnimatedNumber = require('./components/AnimatedNumber');
 
 var _AnimatedNumber2 = _interopRequireDefault(_AnimatedNumber);
@@ -85,6 +93,7 @@ var _Select = require('./components/Select');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = {
+  TextInput: _TextInput2.default,
   SingleSelect: _Select.SingleSelect,
   Avatar: _Avatar2.default,
   ProgressBar: _ProgressBar2.default,
@@ -106,5 +115,6 @@ module.exports = {
   Tile: _Tile2.default,
   Slider: _Slider2.default,
   RangeSlider: _RangeSlider2.default,
-  MultiSelect: _Select.MultiSelect
+  MultiSelect: _Select.MultiSelect,
+  Tooltip: _Tooltip2.default
 };

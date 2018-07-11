@@ -22,9 +22,9 @@ const Progress = styled.div`
   transition: width 0.25s linear;
 `;
 
-const ProgressBar = props => (
-  <ProgressWrapper>
-    <Progress {...props} />
+const ProgressBar = ({ percent, ...props }) => (
+  <ProgressWrapper {...props}>
+    <Progress percent={percent} />
   </ProgressWrapper>
 );
 

@@ -21,6 +21,8 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var ProgressWrapper = _styledComponents2.default.div(_templateObject, function (_ref) {
@@ -36,11 +38,14 @@ var Progress = _styledComponents2.default.div(_templateObject2, function (_ref2)
   return percent || 0;
 });
 
-var ProgressBar = function ProgressBar(props) {
+var ProgressBar = function ProgressBar(_ref4) {
+  var percent = _ref4.percent,
+      props = _objectWithoutProperties(_ref4, ['percent']);
+
   return _react2.default.createElement(
     ProgressWrapper,
-    null,
-    _react2.default.createElement(Progress, props)
+    props,
+    _react2.default.createElement(Progress, { percent: percent })
   );
 };
 

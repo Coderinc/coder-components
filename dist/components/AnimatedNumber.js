@@ -171,7 +171,7 @@ AnimatedNumber.propTypes = {
   duration: _propTypes2.default.number,
   noDecimal: _propTypes2.default.bool,
   format: _propTypes2.default.func,
-  component: _propTypes2.default.element
+  component: _propTypes2.default.func
 };
 
 AnimatedNumber.defaultProps = {
