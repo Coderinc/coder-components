@@ -8,7 +8,11 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _styledComponents = require('styled-components');
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _styledComponents = require('../../node_modules/styled-components');
 
 var _lightTheme = require('../styles/themes/lightTheme');
 
@@ -20,10 +24,9 @@ var _baseColors2 = _interopRequireDefault(_baseColors);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function (props) {
-  var _props$primary = props.primary,
-      primary = _props$primary === undefined ? 'pink' : _props$primary;
-
+var LightThemeProvider = function LightThemeProvider(_ref) {
+  var primary = _ref.primary,
+      children = _ref.children;
 
   var theme = {};
   Object.keys(_lightTheme2.default).forEach(function (k) {
@@ -34,6 +37,18 @@ exports.default = function (props) {
   return _react2.default.createElement(
     _styledComponents.ThemeProvider,
     { theme: theme },
-    props.children
+    children
   );
 };
+
+LightThemeProvider.propTypes = {
+  primary: _propTypes2.default.string,
+  children: _propTypes2.default.element
+};
+
+LightThemeProvider.defaultProps = {
+  primary: 'pink',
+  children: null
+};
+
+exports.default = LightThemeProvider;

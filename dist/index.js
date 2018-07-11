@@ -64,7 +64,13 @@ var _AnimatedNumber = require('./components/AnimatedNumber');
 
 var _AnimatedNumber2 = _interopRequireDefault(_AnimatedNumber);
 
+var _RangeSlider = require('./components/RangeSlider');
+
+var _RangeSlider2 = _interopRequireDefault(_RangeSlider);
+
 var _Slider = require('./components/Slider');
+
+var _Slider2 = _interopRequireDefault(_Slider);
 
 var _PhaseBar = require('./components/PhaseBar');
 
@@ -98,7 +104,7 @@ module.exports = {
   AnimatedNumber: _AnimatedNumber2.default,
   IconChip: _IconChip2.default,
   Tile: _Tile2.default,
-  Slider: _Slider.Slider,
-  RangeSlider: _Slider.RangeSlider,
+  Slider: _Slider2.default,
+  RangeSlider: _RangeSlider2.default,
   MultiSelect: _Select.MultiSelect
 };

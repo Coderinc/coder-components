@@ -30,11 +30,12 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var DropdownContainer = exports.DropdownContainer = _styledComponents2.default.div(_templateObject, function (props) {
-  return props.theme.offsetFont;
+var DropdownContainer = exports.DropdownContainer = _styledComponents2.default.div(_templateObject, function (_ref) {
+  var theme = _ref.theme;
+  return theme.offsetFont;
 });
 
-var DropdownIcon = function DropdownIcon(props) {
+var DropdownIcon = function DropdownIcon() {
   return _react2.default.createElement(
     DropdownContainer,
     null,
@@ -53,69 +54,72 @@ var DropdownIndicator = function DropdownIndicator(props) {
 
 var SingleValueContainer = _styledComponents2.default.div(_templateObject2);
 
-var SingleValue = function SingleValue(props) {
+var SingleValue = function SingleValue(_ref2) {
+  var data = _ref2.data,
+      props = _objectWithoutProperties(_ref2, ['data']);
+
   return _react2.default.createElement(
     _reactSelect.components.SingleValue,
     props,
     _react2.default.createElement(
       SingleValueContainer,
       null,
-      props.data.icon && _react2.default.createElement('img', {
-        alt: 'Icon',
-        src: props.data.icon
-      }),
+      data.icon && _react2.default.createElement('img', { alt: 'Icon', src: data.icon }),
       _react2.default.createElement(
         'span',
         null,
-        props.data.label
+        data.label
       )
     )
   );
 };
 
-var PlaceholderContainer = _styledComponents2.default.div(_templateObject3, function (props) {
-  return props.theme.offsetFont;
+var PlaceholderContainer = _styledComponents2.default.div(_templateObject3, function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.offsetFont;
 });
 
-var Placeholder = function Placeholder(props) {
+var Placeholder = function Placeholder(_ref4) {
+  var icon = _ref4.icon,
+      label = _ref4.label,
+      props = _objectWithoutProperties(_ref4, ['icon', 'label']);
+
   return _react2.default.createElement(
     _reactSelect.components.Placeholder,
     props,
     _react2.default.createElement(
       PlaceholderContainer,
       null,
-      props.icon && _react2.default.createElement('img', {
-        alt: 'Icon',
-        src: props.icon
-      }),
+      icon && _react2.default.createElement('img', { alt: 'Icon', src: icon }),
       _react2.default.createElement(
         'span',
         null,
-        props.label || 'Select...'
+        label || 'Select...'
       )
     )
   );
 };
 
-var OptionContainer = _styledComponents2.default.div(_templateObject3, function (props) {
-  return props.theme.offsetFont;
+var OptionContainer = _styledComponents2.default.div(_templateObject3, function (_ref5) {
+  var theme = _ref5.theme;
+  return theme.offsetFont;
 });
 
-var Option = function Option(props) {
+var Option = function Option(_ref6) {
+  var data = _ref6.data,
+      props = _objectWithoutProperties(_ref6, ['data']);
+
   return _react2.default.createElement(
     _reactSelect.components.Option,
     props,
     _react2.default.createElement(
       OptionContainer,
       null,
-      props.data.icon && _react2.default.createElement('img', {
-        alt: 'Icon',
-        src: props.data.icon
-      }),
+      data.icon && _react2.default.createElement('img', { alt: 'Icon', src: data.icon }),
       _react2.default.createElement(
         'span',
         null,
-        props.data.label
+        data.label
       )
     )
   );
@@ -123,31 +127,35 @@ var Option = function Option(props) {
 
 var MultiValueLabelContainer = _styledComponents2.default.div(_templateObject4);
 
-var MultiValueLabel = function MultiValueLabel(props) {
+var MultiValueLabel = function MultiValueLabel(_ref7) {
+  var icon = _ref7.icon,
+      label = _ref7.label,
+      props = _objectWithoutProperties(_ref7, ['icon', 'label']);
+
   return _react2.default.createElement(
     _reactSelect.components.MultiValueLabel,
     props,
     _react2.default.createElement(
       MultiValueLabelContainer,
       null,
-      props.icon && _react2.default.createElement('img', {
-        alt: 'Icon',
-        src: props.icon
-      }),
+      icon && _react2.default.createElement('img', { alt: 'Icon', src: icon }),
       _react2.default.createElement(
         'span',
         null,
-        props.label
+        label
       )
     )
   );
 };
 
-var MultiValue = function MultiValue(props) {
+var MultiValue = function MultiValue(_ref8) {
+  var data = _ref8.data,
+      props = _objectWithoutProperties(_ref8, ['data']);
+
   return _react2.default.createElement(
     _reactSelect.components.MultiValue,
     props,
-    _react2.default.createElement(MultiValueLabel, props.data)
+    _react2.default.createElement(MultiValueLabel, data)
   );
 };
 
@@ -259,9 +267,9 @@ var themer = function themer(theme) {
   };
 };
 
-var ThemelessSingleSelect = function ThemelessSingleSelect(_ref) {
-  var theme = _ref.theme,
-      props = _objectWithoutProperties(_ref, ['theme']);
+var ThemelessSingleSelect = function ThemelessSingleSelect(_ref9) {
+  var theme = _ref9.theme,
+      props = _objectWithoutProperties(_ref9, ['theme']);
 
   return _react2.default.createElement(_reactSelect2.default, _extends({}, props, {
     components: {
@@ -275,9 +283,9 @@ var ThemelessSingleSelect = function ThemelessSingleSelect(_ref) {
 };
 
 exports.ThemelessSingleSelect = ThemelessSingleSelect;
-var ThemelessMultiSelect = function ThemelessMultiSelect(_ref2) {
-  var theme = _ref2.theme,
-      props = _objectWithoutProperties(_ref2, ['theme']);
+var ThemelessMultiSelect = function ThemelessMultiSelect(_ref10) {
+  var theme = _ref10.theme,
+      props = _objectWithoutProperties(_ref10, ['theme']);
 
   return _react2.default.createElement(_reactSelect2.default, _extends({}, props, {
     components: {

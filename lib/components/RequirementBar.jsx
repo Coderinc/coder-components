@@ -1,12 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Paragraph from '../elements/Paragraph';
 import Chip from '../elements/Chip';
 
 const BarContainer = styled.div`
-  background-color: ${props =>
-    props.active ? props.theme.activeBackground : props.theme.offsetBackground};
-  color: ${props => props.theme.primaryFont};
+  background-color: ${({ active, theme }) => (active ? theme.activeBackground : theme.offsetBackground)};
+  color: ${({ theme }) => theme.primaryFont};
 
   box-sizing: border-box;
   border-radius: 0.125rem;
@@ -44,10 +44,10 @@ const Icon = styled.div`
   margin: 0 0.25rem;
   &::before {
     font-size: 1.5rem;
-    color: ${props => props.theme.offsetFont};
+    color: ${({ theme }) => theme.offsetFont};
     font-family: coder-icons;
     font-weight: normal;
-    content: '${props => props.content}';
+    content: '${({ content }) => content}';
   }
 `;
 
@@ -55,21 +55,31 @@ const Fill = styled.div`
   flex: 1;
 `;
 
-export const RequirementBar = ({ phases = [], label, ...props }) => (
+const RequirementBar = ({ phases, label, ...props }) => (
   <BarContainer {...props}>
     <BarContent>
       <BarTop>
-        <Paragraph>{label}</Paragraph>
+        <Paragraph>
+          {label}
+        </Paragraph>
         <Fill />
         <Icon content="\f107" />
         <Icon content="\f11f" />
       </BarTop>
-      <BarBottom>{phases.map(p => (<Chip
-        key={p}
-        label={p}
-      />))}</BarBottom>
+      <BarBottom>
+        {phases.map(p => <Chip key={p} label={p} />)}
+      </BarBottom>
     </BarContent>
   </BarContainer>
 );
+
+RequirementBar.propTypes = {
+  phases: PropTypes.arrayOf(PropTypes.string),
+  label: PropTypes.string.isRequired,
+};
+
+RequirementBar.defaultProps = {
+  phases: [],
+};
 
 export default RequirementBar;

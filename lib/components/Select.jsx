@@ -11,7 +11,7 @@ export const DropdownContainer = styled.div`
     position: absolute;
     display: flex;
     align-items: flex-start;
-    color: ${props => props.theme.offsetFont};
+    color: ${({ theme }) => theme.offsetFont};
     font-family: coder-icons;
     height: 1rem;
     width: 1rem;
@@ -29,11 +29,16 @@ export const DropdownContainer = styled.div`
   }
 `;
 
-const DropdownIcon = props => <DropdownContainer><span /><span /></DropdownContainer>;
+const DropdownIcon = () => (
+  <DropdownContainer>
+    <span />
+    <span />
+  </DropdownContainer>
+);
 
 const DropdownIndicator = props => (
   <SelectComponents.DropdownIndicator {...props}>
-    <DropdownIcon /> 
+    <DropdownIcon />
   </SelectComponents.DropdownIndicator>
 );
 
@@ -56,26 +61,23 @@ const SingleValueContainer = styled.div`
   }
 `;
 
-const SingleValue = props => {
-  return (
-    <SelectComponents.SingleValue {...props}>
-      <SingleValueContainer>
-        {props.data.icon && (<img
-          alt="Icon"
-          src={props.data.icon}
-        />)} 
-        <span>{props.data.label}</span>
-      </SingleValueContainer>
-    </SelectComponents.SingleValue>
-  );
-};
+const SingleValue = ({ data, ...props }) => (
+  <SelectComponents.SingleValue {...props}>
+    <SingleValueContainer>
+      {data.icon && <img alt="Icon" src={data.icon} />}
+      <span>
+        {data.label}
+      </span>
+    </SingleValueContainer>
+  </SelectComponents.SingleValue>
+);
 
 const PlaceholderContainer = styled.div`
   display: flex;
   align-items: center;
 
   span {
-    color: ${props => props.theme.offsetFont};
+    color: ${({ theme }) => theme.offsetFont};
   }
 
   img {
@@ -85,14 +87,13 @@ const PlaceholderContainer = styled.div`
   }
 `;
 
-const Placeholder = props => (
+const Placeholder = ({ icon, label, ...props }) => (
   <SelectComponents.Placeholder {...props}>
     <PlaceholderContainer>
-      {props.icon && (<img
-        alt="Icon"
-        src={props.icon}
-      />)}
-      <span>{props.label || 'Select...'}</span>
+      {icon && <img alt="Icon" src={icon} />}
+      <span>
+        {label || 'Select...'}
+      </span>
     </PlaceholderContainer>
   </SelectComponents.Placeholder>
 );
@@ -102,7 +103,7 @@ const OptionContainer = styled.div`
   align-items: center;
 
   span {
-    color: ${props => props.theme.offsetFont};
+    color: ${({ theme }) => theme.offsetFont};
   }
 
   img {
@@ -112,40 +113,36 @@ const OptionContainer = styled.div`
   }
 `;
 
-const Option = props => {
-  return (
-    <SelectComponents.Option {...props}>
-      <OptionContainer>
-        {props.data.icon && (<img
-          alt="Icon"
-          src={props.data.icon}
-        />)}
-        <span>{props.data.label}</span>
-      </OptionContainer>
-    </SelectComponents.Option>
-  );
-};
+const Option = ({ data, ...props }) => (
+  <SelectComponents.Option {...props}>
+    <OptionContainer>
+      {data.icon && <img alt="Icon" src={data.icon} />}
+      <span>
+        {data.label}
+      </span>
+    </OptionContainer>
+  </SelectComponents.Option>
+);
 
 const MultiValueLabelContainer = styled.div`
   display: flex;
   align-items: center;
 `;
 
-const MultiValueLabel = props => (
+const MultiValueLabel = ({ icon, label, ...props }) => (
   <SelectComponents.MultiValueLabel {...props}>
     <MultiValueLabelContainer>
-      {props.icon && (<img
-        alt="Icon"
-        src={props.icon}
-      />)}
-      <span>{props.label}</span>
+      {icon && <img alt="Icon" src={icon} />}
+      <span>
+        {label}
+      </span>
     </MultiValueLabelContainer>
   </SelectComponents.MultiValueLabel>
 );
 
-const MultiValue = props => (
+const MultiValue = ({ data, ...props }) => (
   <SelectComponents.MultiValue {...props}>
-    <MultiValueLabel {...props.data} />
+    <MultiValueLabel {...data} />
   </SelectComponents.MultiValue>
 );
 

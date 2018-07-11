@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _raf = require('raf');
 
 var _raf2 = _interopRequireDefault(_raf);
@@ -49,10 +53,13 @@ var AnimatedNumber = function (_React$Component) {
   }, {
     key: 'componentDidUpdate',
     value: function componentDidUpdate(prevProps) {
-      if (this.state.currentNumber === this.props.number) {
+      var currentNumber = this.state.currentNumber;
+      var number = this.props.number;
+
+      if (currentNumber === number) {
         return;
       }
-      if (prevProps.number === this.props.number) {
+      if (prevProps.number === number) {
         return;
       }
       if (this.tweenHandler) {
@@ -95,10 +102,13 @@ var AnimatedNumber = function (_React$Component) {
       var _props = this.props,
           number = _props.number,
           duration = _props.duration;
-      var currentNumber = this.state.currentNumber;
+      var _state = this.state,
+          currentNumber = _state.currentNumber,
+          startTime = _state.startTime,
+          fromNumber = _state.fromNumber;
 
-      var startTime = start ? timestamp : this.state.startTime;
-      var fromNumber = start ? currentNumber : this.state.fromNumber;
+      var validatedStartTime = start ? timestamp : startTime;
+      var validatedFromNumber = start ? currentNumber : fromNumber;
 
       var newNumber = void 0;
       if (timestamp - startTime >= duration) {
@@ -117,8 +127,8 @@ var AnimatedNumber = function (_React$Component) {
 
       this.setState({
         currentNumber: newNumber,
-        startTime: startTime || timestamp,
-        fromNumber: fromNumber,
+        startTime: validatedStartTime || timestamp,
+        fromNumber: validatedFromNumber,
         lastTimestamp: timestamp
       });
       this.tweenHandler = (0, _raf2.default)(this.tweenValue);
@@ -126,10 +136,16 @@ var AnimatedNumber = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var displayValue = this.props.noDecimal ? Math.round(this.state.currentNumber) : this.state.currentNumber;
+      var _props2 = this.props,
+          noDecimal = _props2.noDecimal,
+          format = _props2.format,
+          component = _props2.component;
+      var currentNumber = this.state.currentNumber;
 
-      var C = this.props.component;
-      var formattedValue = this.props.format ? this.props.format(displayValue) : displayValue;
+      var displayValue = noDecimal ? Math.round(currentNumber) : currentNumber;
+
+      var C = component;
+      var formattedValue = format ? format(displayValue) : displayValue;
 
       if (C) {
         return _react2.default.createElement(
@@ -149,5 +165,21 @@ var AnimatedNumber = function (_React$Component) {
 
   return AnimatedNumber;
 }(_react2.default.Component);
+
+AnimatedNumber.propTypes = {
+  number: _propTypes2.default.number,
+  duration: _propTypes2.default.number,
+  noDecimal: _propTypes2.default.bool,
+  format: _propTypes2.default.func,
+  component: _propTypes2.default.element
+};
+
+AnimatedNumber.defaultProps = {
+  number: 0,
+  duration: 250,
+  noDecimal: false,
+  format: undefined,
+  component: undefined
+};
 
 exports.default = AnimatedNumber;

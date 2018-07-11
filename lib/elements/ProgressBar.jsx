@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const ProgressWrapper = styled.div`
-  background-color: ${props => props.theme.offsetBackground};
+  background-color: ${({ theme }) => theme.offsetBackground};
 
   height: 0.75rem;
   width: 100%;
@@ -11,20 +12,28 @@ const ProgressWrapper = styled.div`
 `;
 
 const Progress = styled.div`
-  background-color: ${props => props.theme.primary};
+  background-color: ${({ theme }) => theme.primary};
 
   height: 100%;
-  width: ${props => props.percent || 0}%;
+  width: ${({ percent }) => percent || 0}%;
 
   border-radius: 0.5rem;
 
   transition: width 0.25s linear;
 `;
 
-export const ProgressBar = props => (
+const ProgressBar = props => (
   <ProgressWrapper>
     <Progress {...props} />
   </ProgressWrapper>
 );
+
+ProgressBar.propTypes = {
+  percent: PropTypes.number,
+};
+
+ProgressBar.defaultProps = {
+  percent: 0,
+};
 
 export default ProgressBar;

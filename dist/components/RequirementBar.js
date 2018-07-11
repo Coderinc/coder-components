@@ -3,7 +3,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.RequirementBar = undefined;
 
 var _templateObject = _taggedTemplateLiteral(['\n  background-color: ', ';\n  color: ', ';\n\n  box-sizing: border-box;\n  border-radius: 0.125rem;\n  padding: 0.5rem;\n  margin: 0.25rem 0;\n  width: 100%;\n\n  display: flex;\n\n  &::before {\n    font-size: 1.5rem;\n    font-family: coder-icons;\n    font-weight: normal;\n    content: \'\f108\';\n    margin-right: 0.5rem;\n  }\n'], ['\n  background-color: ', ';\n  color: ', ';\n\n  box-sizing: border-box;\n  border-radius: 0.125rem;\n  padding: 0.5rem;\n  margin: 0.25rem 0;\n  width: 100%;\n\n  display: flex;\n\n  &::before {\n    font-size: 1.5rem;\n    font-family: coder-icons;\n    font-weight: normal;\n    content: \'\\f108\';\n    margin-right: 0.5rem;\n  }\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  display: flex;\n  flex-direction: column;\n  flex: 1;\n'], ['\n  display: flex;\n  flex-direction: column;\n  flex: 1;\n']),
@@ -15,6 +14,10 @@ var _templateObject = _taggedTemplateLiteral(['\n  background-color: ', ';\n  co
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _styledComponents = require('styled-components');
 
@@ -34,10 +37,13 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var BarContainer = _styledComponents2.default.div(_templateObject, function (props) {
-  return props.active ? props.theme.activeBackground : props.theme.offsetBackground;
-}, function (props) {
-  return props.theme.primaryFont;
+var BarContainer = _styledComponents2.default.div(_templateObject, function (_ref) {
+  var active = _ref.active,
+      theme = _ref.theme;
+  return active ? theme.activeBackground : theme.offsetBackground;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.primaryFont;
 });
 
 var BarContent = _styledComponents2.default.div(_templateObject2);
@@ -46,19 +52,20 @@ var BarTop = _styledComponents2.default.div(_templateObject3);
 
 var BarBottom = _styledComponents2.default.div(_templateObject4);
 
-var Icon = _styledComponents2.default.div(_templateObject5, function (props) {
-  return props.theme.offsetFont;
-}, function (props) {
-  return props.content;
+var Icon = _styledComponents2.default.div(_templateObject5, function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.offsetFont;
+}, function (_ref4) {
+  var content = _ref4.content;
+  return content;
 });
 
 var Fill = _styledComponents2.default.div(_templateObject6);
 
-var RequirementBar = function RequirementBar(_ref) {
-  var _ref$phases = _ref.phases,
-      phases = _ref$phases === undefined ? [] : _ref$phases,
-      label = _ref.label,
-      props = _objectWithoutProperties(_ref, ['phases', 'label']);
+var RequirementBar = function RequirementBar(_ref5) {
+  var phases = _ref5.phases,
+      label = _ref5.label,
+      props = _objectWithoutProperties(_ref5, ['phases', 'label']);
 
   return _react2.default.createElement(
     BarContainer,
@@ -82,15 +89,20 @@ var RequirementBar = function RequirementBar(_ref) {
         BarBottom,
         null,
         phases.map(function (p) {
-          return _react2.default.createElement(_Chip2.default, {
-            key: p,
-            label: p
-          });
+          return _react2.default.createElement(_Chip2.default, { key: p, label: p });
         })
       )
     )
   );
 };
 
-exports.RequirementBar = RequirementBar;
+RequirementBar.propTypes = {
+  phases: _propTypes2.default.arrayOf(_propTypes2.default.string),
+  label: _propTypes2.default.string.isRequired
+};
+
+RequirementBar.defaultProps = {
+  phases: []
+};
+
 exports.default = RequirementBar;

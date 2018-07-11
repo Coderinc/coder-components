@@ -14,8 +14,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-exports.default = _styledComponents2.default.div(_templateObject, function (props) {
-  return props.theme.primaryBackground;
-}, function (props) {
-  return props.theme.primaryFont;
+exports.default = _styledComponents2.default.div(_templateObject, function (_ref) {
+  var theme = _ref.theme;
+  return theme.primaryBackground;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.primaryFont;
 });

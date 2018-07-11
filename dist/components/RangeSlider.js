@@ -22,8 +22,6 @@ var _rcSlider2 = _interopRequireDefault(_rcSlider);
 
 var _styledComponents = require('styled-components');
 
-require('rc-slider/assets/index.css');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32,10 +30,10 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var sliderStyle = function sliderStyle(theme) {
+var rangeSliderStyle = function rangeSliderStyle(theme) {
   return {
     railStyle: {
-      backgroundColor: theme.primary
+      backgroundColor: theme.offsetBackground
     },
     dotStyle: {
       display: 'none'
@@ -67,13 +65,13 @@ var markStyle = function markStyle(theme, index, active) {
   };
 };
 
-var Slider = function (_React$Component) {
-  _inherits(Slider, _React$Component);
+var RangeSlider = function (_React$Component) {
+  _inherits(RangeSlider, _React$Component);
 
-  function Slider(props) {
-    _classCallCheck(this, Slider);
+  function RangeSlider(props) {
+    _classCallCheck(this, RangeSlider);
 
-    var _this = _possibleConstructorReturn(this, (Slider.__proto__ || Object.getPrototypeOf(Slider)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (RangeSlider.__proto__ || Object.getPrototypeOf(RangeSlider)).call(this, props));
 
     var _props$minValue = props.minValue,
         minValue = _props$minValue === undefined ? 0 : _props$minValue,
@@ -92,30 +90,27 @@ var Slider = function (_React$Component) {
     return _this;
   }
 
-  _createClass(Slider, [{
+  _createClass(RangeSlider, [{
     key: 'render',
     value: function render() {
       var _this2 = this;
 
       var _props = this.props,
-          _props$minValue2 = _props.minValue,
-          minValue = _props$minValue2 === undefined ? 0 : _props$minValue2,
-          _props$maxValue2 = _props.maxValue,
-          maxValue = _props$maxValue2 === undefined ? 10 : _props$maxValue2,
-          _props$input = _props.input,
-          input = _props$input === undefined ? { value: 5 } : _props$input,
+          minValue = _props.minValue,
+          maxValue = _props.maxValue,
+          input = _props.input,
           theme = _props.theme;
 
 
       var marks = {};
       Object.keys(this.marks).forEach(function (k, i) {
         marks[k] = _extends({}, _this2.marks[k], {
-          style: markStyle(theme, i, input.value === +k)
+          style: markStyle(theme, i, input.value.includes(+k))
         });
       });
 
-      return _react2.default.createElement(_rcSlider2.default, _extends({
-        defaultValue: input.value || minValue,
+      return _react2.default.createElement(_rcSlider2.default.Range, _extends({
+        defaultValue: input.value || [],
         marks: marks,
         max: maxValue,
         min: minValue,
@@ -123,23 +118,23 @@ var Slider = function (_React$Component) {
         step: null,
         style: { margin: '1rem 0' },
         value: input.value
-      }, sliderStyle(theme)));
+      }, rangeSliderStyle(theme)));
     }
   }]);
 
-  return Slider;
+  return RangeSlider;
 }(_react2.default.Component);
 
-Slider.propTypes = {
+RangeSlider.propTypes = {
   minValue: _propTypes2.default.number,
   maxValue: _propTypes2.default.number,
   input: _propTypes2.default.object.isRequired,
   theme: _propTypes2.default.object.isRequired
 };
 
-Slider.defaultProps = {
+RangeSlider.defaultProps = {
   minValue: 0,
   maxValue: 10
 };
 
-exports.default = (0, _styledComponents.withTheme)(Slider);
+exports.default = (0, _styledComponents.withTheme)(RangeSlider);

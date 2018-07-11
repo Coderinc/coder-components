@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const ChipWrapper = styled.div`
-  background-color: ${props => props.theme.activeBackground};
-  color: ${props => props.theme.primaryFont};
+  background-color: ${({ theme }) => theme.activeBackground};
+  color: ${({ theme }) => theme.primaryFont};
 
   padding: 0.375rem 0.5rem 0.25rem;
   margin: 0.25rem;
@@ -23,14 +24,21 @@ const ChipWrapper = styled.div`
   }
 `;
 
-export const IconChip = ({ icon, label, ...props }) => (
+const IconChip = ({ icon, label, ...props }) => (
   <ChipWrapper {...props}>
-    <img
-      alt="Icon"
-      src={icon}
-    />
+    {icon && <img alt="Icon" src={icon} />}
     {label}
   </ChipWrapper>
 );
+
+IconChip.propTypes = {
+  icon: PropTypes.string,
+  label: PropTypes.string,
+};
+
+IconChip.defaultProps = {
+  icon: null,
+  label: 'Joe Schmoe',
+};
 
 export default IconChip;
