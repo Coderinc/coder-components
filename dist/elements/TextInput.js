@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  padding: 0.5rem 0;\n\n  display: flex;\n  flex-wrap: wrap;\n'], ['\n  width: 100%;\n  padding: 0.5rem 0;\n\n  display: flex;\n  flex-wrap: wrap;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  width: 1.5rem;\n  height: 1.5rem;\n  margin: 0 1rem;\n'], ['\n  width: 1.5rem;\n  height: 1.5rem;\n  margin: 0 1rem;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  width: 2rem;\n  height: 2rem;\n  margin: 0 1rem;\n  margin-top: 0.5rem;\n'], ['\n  width: 2rem;\n  height: 2rem;\n  margin: 0 1rem;\n  margin-top: 0.5rem;\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  background-color: transparent;\n  caret-color: ', ';\n  outline: none;\n  border: none;\n  font-family: circular;\n  font-size: ', ';\n  font-weight: ', ';\n  color: ', ';\n  letter-spacing: 0.0625rem;\n  flex: 1;\n\n  &::placeholder {\n    color: ', ';\n  }\n'], ['\n  background-color: transparent;\n  caret-color: ', ';\n  outline: none;\n  border: none;\n  font-family: circular;\n  font-size: ', ';\n  font-weight: ', ';\n  color: ', ';\n  letter-spacing: 0.0625rem;\n  flex: 1;\n\n  &::placeholder {\n    color: ', ';\n  }\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n  color: ', ';\n  font-size: 0.625rem;\n  font-weight: lighter;\n  line-height: 1rem;\n  width: 100%;\n'], ['\n  color: ', ';\n  font-size: 0.625rem;\n  font-weight: lighter;\n  line-height: 1rem;\n  width: 100%;\n']);
 

@@ -18,7 +18,6 @@ const StyledAvatar = styled(Avatar)`
 const Text = Paragraph.extend`
   margin: 0 1rem 0 1rem;
   flex: 1;
-  font-size: 0.75rem;
 `;
 
 const Time = Paragraph.extend`
@@ -30,7 +29,7 @@ const Time = Paragraph.extend`
 
 const Comment = ({ user, comment, createdAt }) => (
   <CommentWrapper>
-    <StyledAvatar {...user} />
+    <StyledAvatar {...user} large />
     <Text>
       {comment}
     </Text>

@@ -4,9 +4,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _templateObject = _taggedTemplateLiteral(['\n  display: flex;\n  width: 100%;\n  padding: 1rem;\n'], ['\n  display: flex;\n  width: 100%;\n  padding: 1rem;\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  margin-top: 0.375rem;\n'], ['\n  margin-top: 0.375rem;\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  margin: 0 1rem 0 1rem;\n  flex: 1;\n  font-size: 0.75rem;\n'], ['\n  margin: 0 1rem 0 1rem;\n  flex: 1;\n  font-size: 0.75rem;\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  margin: 0 1rem 0 1rem;\n  flex: 1;\n'], ['\n  margin: 0 1rem 0 1rem;\n  flex: 1;\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n  color: ', ';\n  font-size: 0.75rem;\n  max-width: 5rem;\n  text-align: right;\n'], ['\n  color: ', ';\n  font-size: 0.75rem;\n  max-width: 5rem;\n  text-align: right;\n']);
 
 var _react = require('react');
@@ -55,7 +57,7 @@ var Comment = function Comment(_ref2) {
   return _react2.default.createElement(
     CommentWrapper,
     null,
-    _react2.default.createElement(StyledAvatar, user),
+    _react2.default.createElement(StyledAvatar, _extends({}, user, { large: true })),
     _react2.default.createElement(
       Text,
       null,

@@ -11,9 +11,10 @@ const InputWrapper = styled.div`
 `;
 
 const Img = styled.img`
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   margin: 0 1rem;
+  margin-top: 0.5rem;
 `;
 
 const Input = styled.input`
