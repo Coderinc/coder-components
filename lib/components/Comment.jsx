@@ -42,7 +42,7 @@ const Comment = ({ user, comment, createdAt }) => (
 Comment.propTypes = {
   user: PropTypes.object.isRequired,
   comment: PropTypes.string.isRequired,
-  createdAt: PropTypes.oneOf([PropTypes.object, PropTypes.string]).isRequired,
+  createdAt: PropTypes.string.isRequired,
 };
 
 export default Comment;

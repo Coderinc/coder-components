@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhaseBar renders correctly 1`] = `
+.c1 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: lighter;
+}
+
+.c3 {
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
+  border-radius: 0.125rem;
+  font-size: 0.625rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.c0::before {
+  font-size: 1.5rem;
+  font-family: coder-icons;
+  font-weight: normal;
+  content: '\\f108';
+  margin-right: 0.5rem;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+  className="c0"
+>
+  <p
+    className="c1"
+  >
+    Lorem Ipsum
+  </p>
+  <div
+    className="c2"
+  />
+  <div
+    className="c3"
+    label="Design"
+  >
+    Design
+  </div>
+</div>
+`;

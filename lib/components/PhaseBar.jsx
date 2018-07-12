@@ -30,8 +30,10 @@ const Fill = styled.div`
   flex: 1;
 `;
 
-const PhaseBar = ({ label, phase, ...props }) => (
-  <BarContainer {...props}>
+const PhaseBar = ({
+  label, phase, value, onClick, ...props
+}) => (
+  <BarContainer {...props} onClick={onClick ? () => onClick(value) : undefined}>
     <Paragraph>
       {label}
     </Paragraph>
@@ -43,6 +45,14 @@ const PhaseBar = ({ label, phase, ...props }) => (
 PhaseBar.propTypes = {
   label: PropTypes.string.isRequired,
   phase: PropTypes.string.isRequired,
+  // eslint-disable-next-line
+  value: PropTypes.any,
+  onClick: PropTypes.func,
+};
+
+PhaseBar.defaultProps = {
+  value: 0,
+  onClick: undefined,
 };
 
 export default PhaseBar;

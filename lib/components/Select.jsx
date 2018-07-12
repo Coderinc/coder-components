@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Select, { components as SelectComponents } from 'react-select';
 import styled, { withTheme } from 'styled-components';
 
@@ -72,6 +73,10 @@ const SingleValue = ({ data, ...props }) => (
   </SelectComponents.SingleValue>
 );
 
+SingleValue.propTypes = {
+  data: PropTypes.object.isRequired,
+};
+
 const PlaceholderContainer = styled.div`
   display: flex;
   align-items: center;
@@ -97,6 +102,16 @@ const Placeholder = ({ icon, label, ...props }) => (
     </PlaceholderContainer>
   </SelectComponents.Placeholder>
 );
+
+Placeholder.propTypes = {
+  icon: PropTypes.string,
+  label: PropTypes.string,
+};
+
+Placeholder.defaultProps = {
+  icon: undefined,
+  label: '',
+};
 
 const OptionContainer = styled.div`
   display: flex;
@@ -124,6 +139,10 @@ const Option = ({ data, ...props }) => (
   </SelectComponents.Option>
 );
 
+Option.propTypes = {
+  data: PropTypes.object.isRequired,
+};
+
 const MultiValueLabelContainer = styled.div`
   display: flex;
   align-items: center;
@@ -140,11 +159,25 @@ const MultiValueLabel = ({ icon, label, ...props }) => (
   </SelectComponents.MultiValueLabel>
 );
 
+MultiValueLabel.propTypes = {
+  icon: PropTypes.string,
+  label: PropTypes.string,
+};
+
+MultiValueLabel.defaultProps = {
+  icon: undefined,
+  label: '',
+};
+
 const MultiValue = ({ data, ...props }) => (
   <SelectComponents.MultiValue {...props}>
     <MultiValueLabel {...data} />
   </SelectComponents.MultiValue>
 );
+
+MultiValue.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 const themer = theme => ({
   container: base => ({
@@ -252,6 +285,10 @@ export const ThemelessSingleSelect = ({ theme, ...props }) => (
   />
 );
 
+ThemelessSingleSelect.propTypes = {
+  theme: PropTypes.object.isRequired,
+};
+
 export const ThemelessMultiSelect = ({ theme, ...props }) => (
   <Select
     {...props}
@@ -264,6 +301,10 @@ export const ThemelessMultiSelect = ({ theme, ...props }) => (
     styles={themer(theme)}
   />
 );
+
+ThemelessMultiSelect.propTypes = {
+  theme: PropTypes.object.isRequired,
+};
 
 export const SingleSelect = withTheme(ThemelessSingleSelect);
 export const MultiSelect = withTheme(ThemelessMultiSelect);

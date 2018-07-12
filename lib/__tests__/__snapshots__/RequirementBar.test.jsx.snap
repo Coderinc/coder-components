@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RequirementBar renders correctly 1`] = `
+.c3 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: lighter;
+}
+
+.c8 {
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
+  border-radius: 0.125rem;
+  font-size: 0.625rem;
+}
+
+.c0 {
+  box-sizing: border-box;
+  border-radius: 0.125rem;
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0::before {
+  font-size: 1.5rem;
+  font-family: coder-icons;
+  font-weight: normal;
+  content: '\\f108';
+  margin-right: 0.5rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c5 {
+  margin: 0 0.25rem;
+}
+
+.c5::before {
+  font-size: 1.5rem;
+  font-family: coder-icons;
+  font-weight: normal;
+  content: '\\f107';
+}
+
+.c6 {
+  margin: 0 0.25rem;
+}
+
+.c6::before {
+  font-size: 1.5rem;
+  font-family: coder-icons;
+  font-weight: normal;
+  content: '\\f11f';
+}
+
+.c4 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <p
+        className="c3"
+      >
+        Lorem Ipsum
+      </p>
+      <div
+        className="c4"
+      />
+      <div
+        className="c5"
+        content="\\\\f107"
+      />
+      <div
+        className="c6"
+        content="\\\\f11f"
+      />
+    </div>
+    <div
+      className="c7"
+    >
+      <div
+        className="c8"
+        label="Design"
+      >
+        Design
+      </div>
+    </div>
+  </div>
+</div>
+`;

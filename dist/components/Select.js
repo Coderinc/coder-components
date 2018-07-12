@@ -7,14 +7,13 @@ exports.MultiSelect = exports.SingleSelect = exports.ThemelessMultiSelect = expo
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  position: relative;\n  height: 1.75rem;\n  width: 1rem;\n\n  span {\n    position: absolute;\n    display: flex;\n    align-items: flex-start;\n    color: ', ';\n    font-family: coder-icons;\n    height: 1rem;\n    width: 1rem;\n    bottom: 0;\n\n    &::before {\n      content: \'\f104\';\n    }\n\n    &:first-of-type {\n      top: 0;\n      bottom: auto;\n      transform: scaleY(-1);\n    }\n  }\n'], ['\n  position: relative;\n  height: 1.75rem;\n  width: 1rem;\n\n  span {\n    position: absolute;\n    display: flex;\n    align-items: flex-start;\n    color: ', ';\n    font-family: coder-icons;\n    height: 1rem;\n    width: 1rem;\n    bottom: 0;\n\n    &::before {\n      content: \'\\f104\';\n    }\n\n    &:first-of-type {\n      top: 0;\n      bottom: auto;\n      transform: scaleY(-1);\n    }\n  }\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n\n  span {\n    text-transform: capitalize;\n    max-width: 100%;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n\n  img {\n    width: 1rem;\n    height: 1rem;\n    margin-right: 0.5rem;\n  }\n'], ['\n  display: flex;\n  align-items: center;\n\n  span {\n    text-transform: capitalize;\n    max-width: 100%;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n\n  img {\n    width: 1rem;\n    height: 1rem;\n    margin-right: 0.5rem;\n  }\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n\n  span {\n    color: ', ';\n  }\n\n  img {\n    width: 1rem;\n    height: 1rem;\n    margin-right: 0.5rem;\n  }\n'], ['\n  display: flex;\n  align-items: center;\n\n  span {\n    color: ', ';\n  }\n\n  img {\n    width: 1rem;\n    height: 1rem;\n    margin-right: 0.5rem;\n  }\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  display: flex;\n  align-items: center;\n'], ['\n  display: flex;\n  align-items: center;\n']);
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _reactSelect = require('react-select');
 
@@ -28,9 +27,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var DropdownContainer = exports.DropdownContainer = _styledComponents2.default.div(_templateObject, function (_ref) {
+var DropdownContainer = exports.DropdownContainer = _styledComponents2.default.div.withConfig({
+  displayName: 'DropdownContainer'
+})(['position:relative;height:1.75rem;width:1rem;span{position:absolute;display:flex;align-items:flex-start;color:', ';font-family:coder-icons;height:1rem;width:1rem;bottom:0;&::before{content:\'\f104\';}&:first-of-type{top:0;bottom:auto;transform:scaleY(-1);}}'], function (_ref) {
   var theme = _ref.theme;
   return theme.offsetFont;
 });
@@ -52,7 +51,9 @@ var DropdownIndicator = function DropdownIndicator(props) {
   );
 };
 
-var SingleValueContainer = _styledComponents2.default.div(_templateObject2);
+var SingleValueContainer = _styledComponents2.default.div.withConfig({
+  displayName: 'SingleValueContainer'
+})(['display:flex;align-items:center;span{text-transform:capitalize;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}img{width:1rem;height:1rem;margin-right:0.5rem;}']);
 
 var SingleValue = function SingleValue(_ref2) {
   var data = _ref2.data,
@@ -74,7 +75,13 @@ var SingleValue = function SingleValue(_ref2) {
   );
 };
 
-var PlaceholderContainer = _styledComponents2.default.div(_templateObject3, function (_ref3) {
+SingleValue.propTypes = {
+  data: _propTypes2.default.object.isRequired
+};
+
+var PlaceholderContainer = _styledComponents2.default.div.withConfig({
+  displayName: 'PlaceholderContainer'
+})(['display:flex;align-items:center;span{color:', ';}img{width:1rem;height:1rem;margin-right:0.5rem;}'], function (_ref3) {
   var theme = _ref3.theme;
   return theme.offsetFont;
 });
@@ -100,7 +107,19 @@ var Placeholder = function Placeholder(_ref4) {
   );
 };
 
-var OptionContainer = _styledComponents2.default.div(_templateObject3, function (_ref5) {
+Placeholder.propTypes = {
+  icon: _propTypes2.default.string,
+  label: _propTypes2.default.string
+};
+
+Placeholder.defaultProps = {
+  icon: undefined,
+  label: ''
+};
+
+var OptionContainer = _styledComponents2.default.div.withConfig({
+  displayName: 'OptionContainer'
+})(['display:flex;align-items:center;span{color:', ';}img{width:1rem;height:1rem;margin-right:0.5rem;}'], function (_ref5) {
   var theme = _ref5.theme;
   return theme.offsetFont;
 });
@@ -125,7 +144,13 @@ var Option = function Option(_ref6) {
   );
 };
 
-var MultiValueLabelContainer = _styledComponents2.default.div(_templateObject4);
+Option.propTypes = {
+  data: _propTypes2.default.object.isRequired
+};
+
+var MultiValueLabelContainer = _styledComponents2.default.div.withConfig({
+  displayName: 'MultiValueLabelContainer'
+})(['display:flex;align-items:center;']);
 
 var MultiValueLabel = function MultiValueLabel(_ref7) {
   var icon = _ref7.icon,
@@ -148,6 +173,16 @@ var MultiValueLabel = function MultiValueLabel(_ref7) {
   );
 };
 
+MultiValueLabel.propTypes = {
+  icon: _propTypes2.default.string,
+  label: _propTypes2.default.string
+};
+
+MultiValueLabel.defaultProps = {
+  icon: undefined,
+  label: ''
+};
+
 var MultiValue = function MultiValue(_ref8) {
   var data = _ref8.data,
       props = _objectWithoutProperties(_ref8, ['data']);
@@ -157,6 +192,10 @@ var MultiValue = function MultiValue(_ref8) {
     props,
     _react2.default.createElement(MultiValueLabel, data)
   );
+};
+
+MultiValue.propTypes = {
+  data: _propTypes2.default.object.isRequired
 };
 
 var themer = function themer(theme) {
@@ -283,6 +322,10 @@ var ThemelessSingleSelect = function ThemelessSingleSelect(_ref9) {
 };
 
 exports.ThemelessSingleSelect = ThemelessSingleSelect;
+ThemelessSingleSelect.propTypes = {
+  theme: _propTypes2.default.object.isRequired
+};
+
 var ThemelessMultiSelect = function ThemelessMultiSelect(_ref10) {
   var theme = _ref10.theme,
       props = _objectWithoutProperties(_ref10, ['theme']);
@@ -299,5 +342,9 @@ var ThemelessMultiSelect = function ThemelessMultiSelect(_ref10) {
 };
 
 exports.ThemelessMultiSelect = ThemelessMultiSelect;
+ThemelessMultiSelect.propTypes = {
+  theme: _propTypes2.default.object.isRequired
+};
+
 var SingleSelect = exports.SingleSelect = (0, _styledComponents.withTheme)(ThemelessSingleSelect);
 var MultiSelect = exports.MultiSelect = (0, _styledComponents.withTheme)(ThemelessMultiSelect);

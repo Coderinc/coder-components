@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import RCSlider from 'rc-slider';
 import { withTheme } from 'styled-components';
-import 'rc-slider/assets/index.css';
 
 const sliderStyle = theme => ({
   railStyle: {
