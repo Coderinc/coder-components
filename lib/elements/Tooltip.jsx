@@ -28,8 +28,6 @@ const leftPosition = `
 
 const TooltipWrapper = styled.div`
   position: relative;
-  max-height: 100%;
-  max-width: 100%;
 `;
 
 const TooltipArrow = styled.div`
@@ -136,7 +134,9 @@ arrow.defaultProps = {
   right: false,
 };
 
-const Tooltip = ({ label, children, top, left, right, ...props }) => (
+const Tooltip = ({
+  label, children, top, left, right, ...props
+}) => (
   <TooltipWrapper {...props}>
     <TooltipLabel top={top} left={left} right={right}>
       {label}

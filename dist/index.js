@@ -90,6 +90,10 @@ var _RequirementBar2 = _interopRequireDefault(_RequirementBar);
 
 var _Select = require('./components/Select');
 
+var _Comment = require('./components/Comment');
+
+var _Comment2 = _interopRequireDefault(_Comment);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 module.exports = {
@@ -116,5 +120,6 @@ module.exports = {
   Slider: _Slider2.default,
   RangeSlider: _RangeSlider2.default,
   MultiSelect: _Select.MultiSelect,
-  Tooltip: _Tooltip2.default
+  Tooltip: _Tooltip2.default,
+  Comment: _Comment2.default
 };

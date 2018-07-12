@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  position: relative;\n  max-height: 100%;\n  max-width: 100%;\n'], ['\n  position: relative;\n  max-height: 100%;\n  max-width: 100%;\n']),
+var _templateObject = _taggedTemplateLiteral(['\n  position: relative;\n'], ['\n  position: relative;\n']),
     _templateObject2 = _taggedTemplateLiteral(['\n  ', ';\n\n  position: absolute;\n  width: 0;\n  height: 0;\n\n  z-index: -1;\n  opacity: 0;\n\n  transition: 0.125s all;\n  transition-delay: 0.1s;\n\n  ', ':hover & {\n    opacity: 1;\n    z-index: 5;\n  }\n'], ['\n  ', ';\n\n  position: absolute;\n  width: 0;\n  height: 0;\n\n  z-index: -1;\n  opacity: 0;\n\n  transition: 0.125s all;\n  transition-delay: 0.1s;\n\n  ', ':hover & {\n    opacity: 1;\n    z-index: 5;\n  }\n']),
     _templateObject3 = _taggedTemplateLiteral(['\n  bottom: 0;\n  border-left: 0.375rem solid transparent;\n  border-right: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid ', ';\n'], ['\n  bottom: 0;\n  border-left: 0.375rem solid transparent;\n  border-right: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid ', ';\n']),
     _templateObject4 = _taggedTemplateLiteral(['\n  right: 0;\n  border-top: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid transparent;\n  border-right: 0.375rem solid ', ';\n'], ['\n  right: 0;\n  border-top: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid transparent;\n  border-right: 0.375rem solid ', ';\n']),

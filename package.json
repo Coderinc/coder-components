@@ -33,6 +33,7 @@
     "react-dom": "^15.6.2"
   },
   "dependencies": {
+    "moment": "^2.22.2",
     "prop-types": "^15.6.2",
     "raf": "^3.4.0",
     "rc-slider": "^8.6.1",
