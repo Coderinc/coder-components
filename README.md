@@ -152,7 +152,22 @@ orange: '#ffa100',
   ```
 * RangeSlider
 * Slider
+* Comment
+  ```javascript
+  props: {
+    user: user                    // The user who made the comment
+    comment: 'Lorem ipsum',       // The text
+    createdAt: '01:12:13',        // Standard datetime stuff
+  }
+  ```
+* Select
 
+  [React-Select](https://deploy-preview-2289--react-select.netlify.com/home)
+  ```javascript
+  props: {
+    // See react-select
+  }
+  ```
 ### Usage
 ```bash
 npm install coder-components
