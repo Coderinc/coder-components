@@ -4,8 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  background-color: ', ';\n\n  color: ', ';\n\n  margin: 1rem 0.5rem;\n  padding: 0.75rem;\n  font-size: 0.875rem;\n  letter-spacing: 0.0625rem;\n  outline: none;\n  border: none;\n  cursor: ', ';\n  border-radius: 0.25rem;\n  text-transform: uppercase;\n  font-weight: 200;\n  width: ', 'px;\n  max-width: 100%;\n  position: relative;\n  text-align: ', ';\n  transition: 0.5s ease all;\n\n  box-shadow: ', ';\n\n  &::before,\n  &::after {\n    position: absolute;\n    content: \'\f100\';\n    font-family: coder-icons;\n    font-size: 1rem;\n    transition: 0.5s ease all;\n  }\n\n  &::before {\n    transform: scaleX(-1);\n    display: ', ';\n    left: 24px;\n  }\n\n  &:hover::before {\n    left: ', ';\n  }\n\n  &::after {\n    display: ', ';\n    right: 24px;\n  }\n\n  &:hover::after {\n    right: ', ';\n  }\n\n  &:hover {\n    color: ', ';\n    box-shadow: ', ';\n  }\n'], ['\n  background-color: ', ';\n\n  color: ', ';\n\n  margin: 1rem 0.5rem;\n  padding: 0.75rem;\n  font-size: 0.875rem;\n  letter-spacing: 0.0625rem;\n  outline: none;\n  border: none;\n  cursor: ', ';\n  border-radius: 0.25rem;\n  text-transform: uppercase;\n  font-weight: 200;\n  width: ', 'px;\n  max-width: 100%;\n  position: relative;\n  text-align: ', ';\n  transition: 0.5s ease all;\n\n  box-shadow: ', ';\n\n  &::before,\n  &::after {\n    position: absolute;\n    content: \'\\f100\';\n    font-family: coder-icons;\n    font-size: 1rem;\n    transition: 0.5s ease all;\n  }\n\n  &::before {\n    transform: scaleX(-1);\n    display: ', ';\n    left: 24px;\n  }\n\n  &:hover::before {\n    left: ', ';\n  }\n\n  &::after {\n    display: ', ';\n    right: 24px;\n  }\n\n  &:hover::after {\n    right: ', ';\n  }\n\n  &:hover {\n    color: ', ';\n    box-shadow: ', ';\n  }\n']);
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -22,9 +20,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var ButtonDiv = _styledComponents2.default.div(_templateObject, function (_ref) {
+var ButtonDiv = _styledComponents2.default.div.withConfig({
+  displayName: 'ButtonDiv'
+})(['background-color:', ';color:', ';margin:1rem 0.5rem;padding:0.75rem;font-size:0.875rem;letter-spacing:0.0625rem;outline:none;border:none;cursor:', ';border-radius:0.25rem;text-transform:uppercase;font-weight:200;width:', 'px;max-width:100%;position:relative;text-align:', ';transition:0.5s ease all;box-shadow:', ';&::before,&::after{position:absolute;content:\'\f100\';font-family:coder-icons;font-size:1rem;transition:0.5s ease all;}&::before{transform:scaleX(-1);display:', ';left:24px;}&:hover::before{left:', ';}&::after{display:', ';right:24px;}&:hover::after{right:', ';}&:hover{color:', ';box-shadow:', ';}'], function (_ref) {
   var disabled = _ref.disabled,
       secondary = _ref.secondary,
       ternary = _ref.ternary,

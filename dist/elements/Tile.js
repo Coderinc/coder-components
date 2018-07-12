@@ -4,11 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  height: 100%;\n  padding: 0.25rem;\n  box-sizing: border-box;\n'], ['\n  width: 100%;\n  height: 100%;\n  padding: 0.25rem;\n  box-sizing: border-box;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  background: ', ';\n  color: ', ';\n\n  display: flex;\n  align-items: center;\n  height: 100%;\n\n  box-sizing: border-box;\n  border-radius: 0.125rem;\n  padding: 1.5rem;\n\n  font-size: 0.75rem;\n  font-weight: lighter;\n  letter-spacing: 0.0625rem;\n  text-transform: ', ';\n\n  cursor: ', ';\n'], ['\n  background: ', ';\n  color: ', ';\n\n  display: flex;\n  align-items: center;\n  height: 100%;\n\n  box-sizing: border-box;\n  border-radius: 0.125rem;\n  padding: 1.5rem;\n\n  font-size: 0.75rem;\n  font-weight: lighter;\n  letter-spacing: 0.0625rem;\n  text-transform: ', ';\n\n  cursor: ', ';\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  flex: 1;\n  display: flex;\n  align-items: center;\n\n  img {\n    width: 2rem;\n    max-height: 1.75rem;\n  }\n'], ['\n  flex: 1;\n  display: flex;\n  align-items: center;\n\n  img {\n    width: 2rem;\n    max-height: 1.75rem;\n  }\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  flex: 2;\n'], ['\n  flex: 2;\n']);
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -23,11 +18,13 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+var TileWrapper = _styledComponents2.default.div.withConfig({
+  displayName: 'TileWrapper'
+})(['width:100%;height:100%;padding:0.25rem;box-sizing:border-box;']);
 
-var TileWrapper = _styledComponents2.default.div(_templateObject);
-
-var TileContainer = _styledComponents2.default.div(_templateObject2, function (_ref) {
+var TileContainer = _styledComponents2.default.div.withConfig({
+  displayName: 'TileContainer'
+})(['background:', ';color:', ';display:flex;align-items:center;height:100%;box-sizing:border-box;border-radius:0.125rem;padding:1.5rem;font-size:0.75rem;font-weight:lighter;letter-spacing:0.0625rem;text-transform:', ';cursor:', ';'], function (_ref) {
   var active = _ref.active,
       theme = _ref.theme;
   return active ? theme.activeBackground : theme.offsetBackground;
@@ -42,9 +39,13 @@ var TileContainer = _styledComponents2.default.div(_templateObject2, function (_
   return disabled ? 'auto' : 'pointer';
 });
 
-var TileIcon = _styledComponents2.default.div(_templateObject3);
+var TileIcon = _styledComponents2.default.div.withConfig({
+  displayName: 'TileIcon'
+})(['flex:1;display:flex;align-items:center;img{width:2rem;max-height:1.75rem;}']);
 
-var TextContainer = _styledComponents2.default.span(_templateObject4);
+var TextContainer = _styledComponents2.default.span.withConfig({
+  displayName: 'TextContainer'
+})(['flex:2;']);
 
 var Tile = function Tile(_ref5) {
   var active = _ref5.active,

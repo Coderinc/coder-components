@@ -4,11 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  width: 100%;\n  padding: 0.5rem 0;\n\n  display: flex;\n  flex-wrap: wrap;\n'], ['\n  width: 100%;\n  padding: 0.5rem 0;\n\n  display: flex;\n  flex-wrap: wrap;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  width: 2rem;\n  height: 2rem;\n  margin: 0 1rem;\n  margin-top: 0.5rem;\n'], ['\n  width: 2rem;\n  height: 2rem;\n  margin: 0 1rem;\n  margin-top: 0.5rem;\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  background-color: transparent;\n  caret-color: ', ';\n  outline: none;\n  border: none;\n  font-family: circular;\n  font-size: ', ';\n  font-weight: ', ';\n  color: ', ';\n  letter-spacing: 0.0625rem;\n  flex: 1;\n\n  &::placeholder {\n    color: ', ';\n  }\n'], ['\n  background-color: transparent;\n  caret-color: ', ';\n  outline: none;\n  border: none;\n  font-family: circular;\n  font-size: ', ';\n  font-weight: ', ';\n  color: ', ';\n  letter-spacing: 0.0625rem;\n  flex: 1;\n\n  &::placeholder {\n    color: ', ';\n  }\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  color: ', ';\n  font-size: 0.625rem;\n  font-weight: lighter;\n  line-height: 1rem;\n  width: 100%;\n'], ['\n  color: ', ';\n  font-size: 0.625rem;\n  font-weight: lighter;\n  line-height: 1rem;\n  width: 100%;\n']);
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -23,13 +18,17 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+var InputWrapper = _styledComponents2.default.div.withConfig({
+  displayName: 'InputWrapper'
+})(['width:100%;padding:0.5rem 0;display:flex;flex-wrap:wrap;']);
 
-var InputWrapper = _styledComponents2.default.div(_templateObject);
+var Img = _styledComponents2.default.img.withConfig({
+  displayName: 'Img'
+})(['width:2rem;height:2rem;margin:0 1rem;margin-top:0.5rem;']);
 
-var Img = _styledComponents2.default.img(_templateObject2);
-
-var Input = _styledComponents2.default.input(_templateObject3, function (_ref) {
+var Input = _styledComponents2.default.input.withConfig({
+  displayName: 'Input'
+})(['background-color:transparent;caret-color:', ';outline:none;border:none;font-family:circular;font-size:', ';font-weight:', ';color:', ';letter-spacing:0.0625rem;flex:1;&::placeholder{color:', ';}'], function (_ref) {
   var theme = _ref.theme;
   return theme.primary;
 }, function (_ref2) {
@@ -46,7 +45,9 @@ var Input = _styledComponents2.default.input(_templateObject3, function (_ref) {
   return theme.offsetFont;
 });
 
-var Textarea = _styledComponents2.default.textarea(_templateObject3, function (_ref6) {
+var Textarea = _styledComponents2.default.textarea.withConfig({
+  displayName: 'Textarea'
+})(['background-color:transparent;caret-color:', ';outline:none;border:none;font-family:circular;font-size:', ';font-weight:', ';color:', ';letter-spacing:0.0625rem;flex:1;&::placeholder{color:', ';}'], function (_ref6) {
   var theme = _ref6.theme;
   return theme.primary;
 }, function (_ref7) {
@@ -63,7 +64,9 @@ var Textarea = _styledComponents2.default.textarea(_templateObject3, function (_
   return theme.offsetFont;
 });
 
-var Error = _styledComponents2.default.span(_templateObject4, function (_ref11) {
+var Error = _styledComponents2.default.span.withConfig({
+  displayName: 'Error'
+})(['color:', ';font-size:0.625rem;font-weight:lighter;line-height:1rem;width:100%;'], function (_ref11) {
   var theme = _ref11.theme;
   return theme.pink;
 });

@@ -4,9 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  background-color: ', ';\n\n  height: 0.75rem;\n  width: 100%;\n\n  border-radius: 0.375rem;\n'], ['\n  background-color: ', ';\n\n  height: 0.75rem;\n  width: 100%;\n\n  border-radius: 0.375rem;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  background-color: ', ';\n\n  height: 100%;\n  width: ', '%;\n\n  border-radius: 0.5rem;\n\n  transition: width 0.25s linear;\n'], ['\n  background-color: ', ';\n\n  height: 100%;\n  width: ', '%;\n\n  border-radius: 0.5rem;\n\n  transition: width 0.25s linear;\n']);
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -23,14 +20,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var ProgressWrapper = _styledComponents2.default.div(_templateObject, function (_ref) {
+var ProgressWrapper = _styledComponents2.default.div.withConfig({
+  displayName: 'ProgressWrapper'
+})(['background-color:', ';height:0.75rem;width:100%;border-radius:0.375rem;'], function (_ref) {
   var theme = _ref.theme;
   return theme.offsetBackground;
 });
 
-var Progress = _styledComponents2.default.div(_templateObject2, function (_ref2) {
+var Progress = _styledComponents2.default.div.withConfig({
+  displayName: 'Progress'
+})(['background-color:', ';height:100%;width:', '%;border-radius:0.5rem;transition:width 0.25s linear;'], function (_ref2) {
   var theme = _ref2.theme;
   return theme.primary;
 }, function (_ref3) {

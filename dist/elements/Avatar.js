@@ -6,9 +6,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _templateObject = _taggedTemplateLiteral(['\n  width: ', ';\n  height: ', ';\n\n  border-radius: 50%;\n'], ['\n  width: ', ';\n  height: ', ';\n\n  border-radius: 50%;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n'], ['\n  width: 100%;\n  height: 100%;\n  border-radius: 50%;\n']);
-
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -29,9 +26,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var AvatarWrapper = _styledComponents2.default.div(_templateObject, function (_ref) {
+var AvatarWrapper = _styledComponents2.default.div.withConfig({
+  displayName: 'AvatarWrapper'
+})(['width:', ';height:', ';border-radius:50%;'], function (_ref) {
   var large = _ref.large,
       small = _ref.small;
 
@@ -55,7 +52,9 @@ var AvatarWrapper = _styledComponents2.default.div(_templateObject, function (_r
   return '1.5rem';
 });
 
-var AvatarImage = _styledComponents2.default.img(_templateObject2);
+var AvatarImage = _styledComponents2.default.img.withConfig({
+  displayName: 'AvatarImage'
+})(['width:100%;height:100%;border-radius:50%;']);
 
 var Avatar = function Avatar(_ref3) {
   var large = _ref3.large,

@@ -4,13 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _templateObject = _taggedTemplateLiteral(['\n  position: relative;\n'], ['\n  position: relative;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  ', ';\n\n  position: absolute;\n  width: 0;\n  height: 0;\n\n  z-index: -1;\n  opacity: 0;\n\n  transition: 0.125s all;\n  transition-delay: 0.1s;\n\n  ', ':hover & {\n    opacity: 1;\n    z-index: 5;\n  }\n'], ['\n  ', ';\n\n  position: absolute;\n  width: 0;\n  height: 0;\n\n  z-index: -1;\n  opacity: 0;\n\n  transition: 0.125s all;\n  transition-delay: 0.1s;\n\n  ', ':hover & {\n    opacity: 1;\n    z-index: 5;\n  }\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  bottom: 0;\n  border-left: 0.375rem solid transparent;\n  border-right: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid ', ';\n'], ['\n  bottom: 0;\n  border-left: 0.375rem solid transparent;\n  border-right: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid ', ';\n']),
-    _templateObject4 = _taggedTemplateLiteral(['\n  right: 0;\n  border-top: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid transparent;\n  border-right: 0.375rem solid ', ';\n'], ['\n  right: 0;\n  border-top: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid transparent;\n  border-right: 0.375rem solid ', ';\n']),
-    _templateObject5 = _taggedTemplateLiteral(['\n  top: 0;\n  border-left: 0.375rem solid transparent;\n  border-right: 0.375rem solid transparent;\n  border-top: 0.375rem solid ', ';\n'], ['\n  top: 0;\n  border-left: 0.375rem solid transparent;\n  border-right: 0.375rem solid transparent;\n  border-top: 0.375rem solid ', ';\n']),
-    _templateObject6 = _taggedTemplateLiteral(['\n  left: 0;\n  border-top: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid transparent;\n  border-left: 0.375rem solid ', ';\n'], ['\n  left: 0;\n  border-top: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid transparent;\n  border-left: 0.375rem solid ', ';\n']),
-    _templateObject7 = _taggedTemplateLiteral(['\n  ', ';\n\n  position: absolute;\n  padding: 0.375rem;\n  border-radius: 0.125rem;\n\n  font-size: 0.75rem;\n  line-height: 0.75rem;\n  text-align: center;\n  white-space: nowrap;\n\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.04);\n\n  color: ', ';\n  background-color: ', ';\n  z-index: -1;\n  opacity: 0;\n\n  transition: 0.125s all;\n  transition-delay: 0.1s;\n\n  ', ':hover & {\n    opacity: 1;\n    z-index: 5;\n  }\n'], ['\n  ', ';\n\n  position: absolute;\n  padding: 0.375rem;\n  border-radius: 0.125rem;\n\n  font-size: 0.75rem;\n  line-height: 0.75rem;\n  text-align: center;\n  white-space: nowrap;\n\n  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.04);\n\n  color: ', ';\n  background-color: ', ';\n  z-index: -1;\n  opacity: 0;\n\n  transition: 0.125s all;\n  transition-delay: 0.1s;\n\n  ', ':hover & {\n    opacity: 1;\n    z-index: 5;\n  }\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  bottom: 0;\n  border-left: 0.375rem solid transparent;\n  border-right: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid ', ';\n'], ['\n  bottom: 0;\n  border-left: 0.375rem solid transparent;\n  border-right: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid ', ';\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  right: 0;\n  border-top: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid transparent;\n  border-right: 0.375rem solid ', ';\n'], ['\n  right: 0;\n  border-top: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid transparent;\n  border-right: 0.375rem solid ', ';\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  top: 0;\n  border-left: 0.375rem solid transparent;\n  border-right: 0.375rem solid transparent;\n  border-top: 0.375rem solid ', ';\n'], ['\n  top: 0;\n  border-left: 0.375rem solid transparent;\n  border-right: 0.375rem solid transparent;\n  border-top: 0.375rem solid ', ';\n']),
+    _templateObject4 = _taggedTemplateLiteral(['\n  left: 0;\n  border-top: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid transparent;\n  border-left: 0.375rem solid ', ';\n'], ['\n  left: 0;\n  border-top: 0.375rem solid transparent;\n  border-bottom: 0.375rem solid transparent;\n  border-left: 0.375rem solid ', ';\n']);
 
 var _react = require('react');
 
@@ -38,9 +35,13 @@ var bottomPosition = '\n  bottom: -0.375rem;\n  left: 50%;\n  transform: transla
 
 var leftPosition = '\n  left: -0.375rem;\n  top: 50%;\n  transform: translate(-100%, -50%);\n';
 
-var TooltipWrapper = _styledComponents2.default.div(_templateObject);
+var TooltipWrapper = _styledComponents2.default.div.withConfig({
+  displayName: 'TooltipWrapper'
+})(['position:relative;']);
 
-var TooltipArrow = _styledComponents2.default.div(_templateObject2, function (_ref) {
+var TooltipArrow = _styledComponents2.default.div.withConfig({
+  displayName: 'TooltipArrow'
+})(['', ';position:absolute;width:0;height:0;z-index:-1;opacity:0;transition:0.125s all;transition-delay:0.1s;', ':hover &{opacity:1;z-index:5;}'], function (_ref) {
   var top = _ref.top,
       right = _ref.right,
       left = _ref.left;
@@ -51,27 +52,29 @@ var TooltipArrow = _styledComponents2.default.div(_templateObject2, function (_r
   return bottomPosition;
 }, TooltipWrapper);
 
-var TooltipArrowUp = TooltipArrow.extend(_templateObject3, function (_ref2) {
+var TooltipArrowUp = TooltipArrow.extend(_templateObject, function (_ref2) {
   var theme = _ref2.theme;
   return theme.activeBackground;
 });
 
-var TooltipArrowLeft = TooltipArrow.extend(_templateObject4, function (_ref3) {
+var TooltipArrowLeft = TooltipArrow.extend(_templateObject2, function (_ref3) {
   var theme = _ref3.theme;
   return theme.activeBackground;
 });
 
-var TooltipArrowDown = TooltipArrow.extend(_templateObject5, function (_ref4) {
+var TooltipArrowDown = TooltipArrow.extend(_templateObject3, function (_ref4) {
   var theme = _ref4.theme;
   return theme.activeBackground;
 });
 
-var TooltipArrowRight = TooltipArrow.extend(_templateObject6, function (_ref5) {
+var TooltipArrowRight = TooltipArrow.extend(_templateObject4, function (_ref5) {
   var theme = _ref5.theme;
   return theme.activeBackground;
 });
 
-var TooltipLabel = _styledComponents2.default.span(_templateObject7, function (_ref6) {
+var TooltipLabel = _styledComponents2.default.span.withConfig({
+  displayName: 'TooltipLabel'
+})(['', ';position:absolute;padding:0.375rem;border-radius:0.125rem;font-size:0.75rem;line-height:0.75rem;text-align:center;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,0.2),0 1px 2px rgba(0,0,0,0.04);color:', ';background-color:', ';z-index:-1;opacity:0;transition:0.125s all;transition-delay:0.1s;', ':hover &{opacity:1;z-index:5;}'], function (_ref6) {
   var top = _ref6.top,
       right = _ref6.right,
       left = _ref6.left;
