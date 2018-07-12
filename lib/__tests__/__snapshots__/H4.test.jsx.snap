@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`H4 light font 1`] = `
+.c0 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: lighter;
+}
+
+<h4
+  className="c0"
+>
+  Lorem Ipsum
+</h4>
+`;
+
+exports[`H4 renders correctly 1`] = `
+.c0 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
+<h4
+  className="c0"
+>
+  Lorem Ipsum
+</h4>
+`;

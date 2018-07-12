@@ -72,7 +72,7 @@ var Avatar = function Avatar(_ref3) {
     _react2.default.createElement(
       _Tooltip2.default,
       { label: label || firstName + ' ' + lastName },
-      _react2.default.createElement(AvatarImage, { src: icon })
+      _react2.default.createElement(AvatarImage, { src: icon, alt: label || firstName })
     )
   );
 };
@@ -80,7 +80,7 @@ var Avatar = function Avatar(_ref3) {
 Avatar.propTypes = {
   large: _propTypes2.default.bool,
   small: _propTypes2.default.bool,
-  icon: _propTypes2.default.string.isRequired,
+  icon: _propTypes2.default.string,
   label: _propTypes2.default.string,
   firstName: _propTypes2.default.string,
   lastName: _propTypes2.default.string
@@ -89,9 +89,10 @@ Avatar.propTypes = {
 Avatar.defaultProps = {
   large: false,
   small: false,
-  label: undefined,
+  label: null,
   firstName: 'Joe',
-  lastName: 'Schmoe'
+  lastName: 'Schmoe',
+  icon: null
 };
 
 exports.default = Avatar;

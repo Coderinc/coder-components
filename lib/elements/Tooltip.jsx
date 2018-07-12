@@ -82,7 +82,7 @@ const TooltipArrowRight = TooltipArrow.extend`
   border-left: 0.375rem solid ${({ theme }) => theme.activeBackground};
 `;
 
-const TooltipLabel = styled.div`
+const TooltipLabel = styled.span`
   ${({ top, right, left }) => {
     if (top) return topPosition;
     if (right) return rightPosition;

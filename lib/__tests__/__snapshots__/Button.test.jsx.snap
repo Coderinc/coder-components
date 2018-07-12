@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+.c0 {
+  margin: 1rem 0.5rem;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  -webkit-letter-spacing: 0.0625rem;
+  -moz-letter-spacing: 0.0625rem;
+  -ms-letter-spacing: 0.0625rem;
+  letter-spacing: 0.0625rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  width: px;
+  max-width: 100%;
+  position: relative;
+  text-align: left;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02),0 1px 2px rgba(0,0,0,0.04);
+}
+
+.c0::before,
+.c0::after {
+  position: absolute;
+  content: '\\f100';
+  font-family: coder-icons;
+  font-size: 1rem;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+.c0::before {
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  display: none;
+  left: 24px;
+}
+
+.c0:hover::before {
+  left: 16px;
+}
+
+.c0::after {
+  right: 24px;
+}
+
+.c0:hover::after {
+  right: 16px;
+}
+
+.c0:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25),0 5px 5px rgba(0,0,0,0.10);
+}
+
+<div
+  className="c0"
+  color="primary"
+>
+  Click
+</div>
+`;
+
+exports[`Button sets color correctly 1`] = `
+.c0 {
+  background-color: #0000FF;
+  margin: 1rem 0.5rem;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  -webkit-letter-spacing: 0.0625rem;
+  -moz-letter-spacing: 0.0625rem;
+  -ms-letter-spacing: 0.0625rem;
+  letter-spacing: 0.0625rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  width: px;
+  max-width: 100%;
+  position: relative;
+  text-align: left;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02),0 1px 2px rgba(0,0,0,0.04);
+}
+
+.c0::before,
+.c0::after {
+  position: absolute;
+  content: '\\f100';
+  font-family: coder-icons;
+  font-size: 1rem;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+.c0::before {
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  display: none;
+  left: 24px;
+}
+
+.c0:hover::before {
+  left: 16px;
+}
+
+.c0::after {
+  right: 24px;
+}
+
+.c0:hover::after {
+  right: 16px;
+}
+
+.c0:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25),0 5px 5px rgba(0,0,0,0.10);
+}
+
+<div
+  className="c0"
+  color="blue"
+>
+  Click
+</div>
+`;
+
+exports[`Button swaps button styles correctly 1`] = `
+.c0 {
+  color: #0000FF;
+  margin: 1rem 0.5rem;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  -webkit-letter-spacing: 0.0625rem;
+  -moz-letter-spacing: 0.0625rem;
+  -ms-letter-spacing: 0.0625rem;
+  letter-spacing: 0.0625rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  width: px;
+  max-width: 100%;
+  position: relative;
+  text-align: left;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02),0 1px 2px rgba(0,0,0,0.04);
+}
+
+.c0::before,
+.c0::after {
+  position: absolute;
+  content: '\\f100';
+  font-family: coder-icons;
+  font-size: 1rem;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+.c0::before {
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  display: none;
+  left: 24px;
+}
+
+.c0:hover::before {
+  left: 16px;
+}
+
+.c0::after {
+  right: 24px;
+}
+
+.c0:hover::after {
+  right: 16px;
+}
+
+.c0:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25),0 5px 5px rgba(0,0,0,0.10);
+}
+
+<div
+  className="c0"
+  color="blue"
+>
+  Click
+</div>
+`;

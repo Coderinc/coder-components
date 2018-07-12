@@ -71,7 +71,7 @@ var TooltipArrowRight = TooltipArrow.extend(_templateObject6, function (_ref5) {
   return theme.activeBackground;
 });
 
-var TooltipLabel = _styledComponents2.default.div(_templateObject7, function (_ref6) {
+var TooltipLabel = _styledComponents2.default.span(_templateObject7, function (_ref6) {
   var top = _ref6.top,
       right = _ref6.right,
       left = _ref6.left;

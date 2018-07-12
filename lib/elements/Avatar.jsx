@@ -37,7 +37,7 @@ const Avatar = ({
 }) => (
   <AvatarWrapper large={large} small={small} {...props}>
     <Tooltip label={label || `${firstName} ${lastName}`}>
-      <AvatarImage src={icon} />
+      <AvatarImage src={icon} alt={label || firstName} />
     </Tooltip>
   </AvatarWrapper>
 );
@@ -45,7 +45,7 @@ const Avatar = ({
 Avatar.propTypes = {
   large: PropTypes.bool,
   small: PropTypes.bool,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.string,
   label: PropTypes.string,
   firstName: PropTypes.string,
   lastName: PropTypes.string,
@@ -54,9 +54,10 @@ Avatar.propTypes = {
 Avatar.defaultProps = {
   large: false,
   small: false,
-  label: undefined,
+  label: null,
   firstName: 'Joe',
   lastName: 'Schmoe',
+  icon: null,
 };
 
 export default Avatar;

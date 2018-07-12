@@ -23,8 +23,6 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var InputWrapper = _styledComponents2.default.div(_templateObject);
@@ -74,13 +72,12 @@ var TextInput = function TextInput(_ref12) {
   var multiline = _ref12.multiline,
       icon = _ref12.icon,
       meta = _ref12.meta,
-      props = _objectWithoutProperties(_ref12, ['multiline', 'icon', 'meta']);
-
+      input = _ref12.input;
   return _react2.default.createElement(
     InputWrapper,
     null,
     icon && _react2.default.createElement(Img, { src: icon, alt: 'Icon' }),
-    multiline ? _react2.default.createElement(Textarea, props) : _react2.default.createElement(Input, props),
+    multiline ? _react2.default.createElement(Textarea, input) : _react2.default.createElement(Input, input),
     _react2.default.createElement(
       Error,
       null,

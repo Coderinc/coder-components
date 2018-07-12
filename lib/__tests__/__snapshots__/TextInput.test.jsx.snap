@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput input renders correctly 1`] = `
+.c0 {
+  width: 100%;
+  padding: 0.5rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c1 {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: circular;
+  font-size: 0.875rem;
+  font-weight: lighter;
+  -webkit-letter-spacing: 0.0625rem;
+  -moz-letter-spacing: 0.0625rem;
+  -ms-letter-spacing: 0.0625rem;
+  letter-spacing: 0.0625rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: circular;
+  font-size: 0.875rem;
+  font-weight: lighter;
+  -webkit-letter-spacing: 0.0625rem;
+  -moz-letter-spacing: 0.0625rem;
+  -ms-letter-spacing: 0.0625rem;
+  letter-spacing: 0.0625rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: circular;
+  font-size: 0.875rem;
+  font-weight: lighter;
+  -webkit-letter-spacing: 0.0625rem;
+  -moz-letter-spacing: 0.0625rem;
+  -ms-letter-spacing: 0.0625rem;
+  letter-spacing: 0.0625rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: circular;
+  font-size: 0.875rem;
+  font-weight: lighter;
+  -webkit-letter-spacing: 0.0625rem;
+  -moz-letter-spacing: 0.0625rem;
+  -ms-letter-spacing: 0.0625rem;
+  letter-spacing: 0.0625rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c2 {
+  font-size: 0.625rem;
+  font-weight: lighter;
+  line-height: 1rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+>
+  <input
+    className="c1"
+  />
+  <span
+    className="c2"
+  />
+</div>
+`;
+
+exports[`TextInput textarea renders correctly 1`] = `
+.c0 {
+  width: 100%;
+  padding: 0.5rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c1 {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: circular;
+  font-size: 0.875rem;
+  font-weight: lighter;
+  -webkit-letter-spacing: 0.0625rem;
+  -moz-letter-spacing: 0.0625rem;
+  -ms-letter-spacing: 0.0625rem;
+  letter-spacing: 0.0625rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: circular;
+  font-size: 0.875rem;
+  font-weight: lighter;
+  -webkit-letter-spacing: 0.0625rem;
+  -moz-letter-spacing: 0.0625rem;
+  -ms-letter-spacing: 0.0625rem;
+  letter-spacing: 0.0625rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: circular;
+  font-size: 0.875rem;
+  font-weight: lighter;
+  -webkit-letter-spacing: 0.0625rem;
+  -moz-letter-spacing: 0.0625rem;
+  -ms-letter-spacing: 0.0625rem;
+  letter-spacing: 0.0625rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1 {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: circular;
+  font-size: 0.875rem;
+  font-weight: lighter;
+  -webkit-letter-spacing: 0.0625rem;
+  -moz-letter-spacing: 0.0625rem;
+  -ms-letter-spacing: 0.0625rem;
+  letter-spacing: 0.0625rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c2 {
+  font-size: 0.625rem;
+  font-weight: lighter;
+  line-height: 1rem;
+  width: 100%;
+}
+
+<div
+  className="c0"
+>
+  <textarea
+    className="c1"
+  />
+  <span
+    className="c2"
+  />
+</div>
+`;

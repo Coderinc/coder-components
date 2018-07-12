@@ -60,11 +60,11 @@ const Error = styled.span`
 `;
 
 const TextInput = ({
-  multiline, icon, meta, ...props
+  multiline, icon, meta, input,
 }) => (
   <InputWrapper>
     {icon && <Img src={icon} alt="Icon" />}
-    {multiline ? <Textarea {...props} /> : <Input {...props} />}
+    {multiline ? <Textarea {...input} /> : <Input {...input} />}
     <Error>
       {meta.error && meta.touched && meta.visited && !meta.active && meta.error}
     </Error>

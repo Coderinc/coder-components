@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chip chooses correct color 1`] = `
+.c0 {
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
+  border-radius: 0.125rem;
+  font-size: 0.625rem;
+  background-color: #FF0000;
+}
+
+<div
+  className="c0"
+  label="test"
+>
+  test
+</div>
+`;
+
+exports[`Chip renders correctly 1`] = `
+.c0 {
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
+  border-radius: 0.125rem;
+  font-size: 0.625rem;
+}
+
+<div
+  className="c0"
+  label="Develop"
+>
+  Develop
+</div>
+`;

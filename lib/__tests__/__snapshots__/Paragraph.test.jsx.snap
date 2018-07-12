@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paragraph bold font 1`] = `
+.c0 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+}
+
+<p
+  className="c0"
+>
+  Lorem Ipsum
+</p>
+`;
+
+exports[`Paragraph renders correctly 1`] = `
+.c0 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: lighter;
+}
+
+<p
+  className="c0"
+>
+  Lorem Ipsum
+</p>
+`;

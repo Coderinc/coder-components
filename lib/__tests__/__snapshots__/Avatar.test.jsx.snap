@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar renders correctly 1`] = `
+<div
+  className="AvatarWrapper-hhMvHp ekaaMQ"
+>
+  <div
+    className="TooltipWrapper-kssXFQ ggKbDb"
+  >
+    <span
+      className="TooltipLabel-dIPTMH ePYwYi"
+    >
+      test
+    </span>
+    <div
+      className="TooltipArrow-fsUgpx jktQis"
+    />
+    <img
+      alt="test"
+      className="AvatarImage-cTHrxV ednqDG"
+      src={null}
+    />
+  </div>
+</div>
+`;
