@@ -48,6 +48,14 @@ orange: '#ffa100',
     lastName: 'Schmoe',           // the label is falsey
   }
   ```
+* ArrowButton
+  ```javascript
+  props: {
+    secondary: false,             // Secdonary button style?
+    color: 'primary',             // Color of button
+    disabled: false,
+  }
+  ```
 * Button
   ```javascript
   props: {
@@ -55,6 +63,7 @@ orange: '#ffa100',
     secondary: false,             // Secdonary button style?
     ternary: false,               // Third button style?
     color: 'primary',             // Color of button
+    disabled: false,
   }
   ```
 * Chip
