@@ -40,6 +40,9 @@ exports[`ArrowButton renders correctly 1`] = `
 
 <div
   className="c0"
+  color="primary"
+  disabled={false}
+  reversed={false}
 />
 `;
 
@@ -85,6 +88,8 @@ exports[`ArrowButton sets color correctly 1`] = `
 <div
   className="c0"
   color="blue"
+  disabled={false}
+  reversed={false}
 />
 `;
 
@@ -130,5 +135,7 @@ exports[`ArrowButton swaps button styles correctly 1`] = `
 <div
   className="c0"
   color="blue"
+  disabled={false}
+  reversed={false}
 />
 `;

@@ -28,6 +28,7 @@ const Input = styled.input`
   color: ${({ theme }) => theme.primaryFont};
   letter-spacing: 0.0625rem;
   flex: 1;
+  max-width: 100%;
 
   &::placeholder {
     color: ${({ theme }) => theme.offsetFont};
@@ -45,6 +46,7 @@ const Textarea = styled.textarea`
   color: ${({ theme }) => theme.primaryFont};
   letter-spacing: 0.0625rem;
   flex: 1;
+  max-width: 100%;
 
   &::placeholder {
     color: ${({ theme }) => theme.offsetFont};
@@ -60,11 +62,11 @@ const Error = styled.span`
 `;
 
 const TextInput = ({
-  multiline, icon, meta, input,
+  multiline, icon, meta, input, ...props
 }) => (
   <InputWrapper>
     {icon && <Img src={icon} alt="Icon" />}
-    {multiline ? <Textarea {...input} /> : <Input {...input} />}
+    {multiline ? <Textarea {...input} {...props} /> : <Input {...input} {...props} />}
     <Error>
       {meta.error && meta.touched && meta.visited && !meta.active && meta.error}
     </Error>

@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -18,6 +20,8 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 var InputWrapper = _styledComponents2.default.div.withConfig({
   displayName: 'InputWrapper'
 })(['width:100%;padding:0.5rem 0;display:flex;flex-wrap:wrap;']);
@@ -28,7 +32,7 @@ var Img = _styledComponents2.default.img.withConfig({
 
 var Input = _styledComponents2.default.input.withConfig({
   displayName: 'Input'
-})(['background-color:transparent;caret-color:', ';outline:none;border:none;font-family:circular;font-size:', ';font-weight:', ';color:', ';letter-spacing:0.0625rem;flex:1;&::placeholder{color:', ';}'], function (_ref) {
+})(['background-color:transparent;caret-color:', ';outline:none;border:none;font-family:circular;font-size:', ';font-weight:', ';color:', ';letter-spacing:0.0625rem;flex:1;max-width:100%;&::placeholder{color:', ';}'], function (_ref) {
   var theme = _ref.theme;
   return theme.primary;
 }, function (_ref2) {
@@ -47,7 +51,7 @@ var Input = _styledComponents2.default.input.withConfig({
 
 var Textarea = _styledComponents2.default.textarea.withConfig({
   displayName: 'Textarea'
-})(['background-color:transparent;caret-color:', ';outline:none;border:none;font-family:circular;font-size:', ';font-weight:', ';color:', ';letter-spacing:0.0625rem;flex:1;&::placeholder{color:', ';}'], function (_ref6) {
+})(['background-color:transparent;caret-color:', ';outline:none;border:none;font-family:circular;font-size:', ';font-weight:', ';color:', ';letter-spacing:0.0625rem;flex:1;max-width:100%;&::placeholder{color:', ';}'], function (_ref6) {
   var theme = _ref6.theme;
   return theme.primary;
 }, function (_ref7) {
@@ -75,12 +79,14 @@ var TextInput = function TextInput(_ref12) {
   var multiline = _ref12.multiline,
       icon = _ref12.icon,
       meta = _ref12.meta,
-      input = _ref12.input;
+      input = _ref12.input,
+      props = _objectWithoutProperties(_ref12, ['multiline', 'icon', 'meta', 'input']);
+
   return _react2.default.createElement(
     InputWrapper,
     null,
     icon && _react2.default.createElement(Img, { src: icon, alt: 'Icon' }),
-    multiline ? _react2.default.createElement(Textarea, input) : _react2.default.createElement(Input, input),
+    multiline ? _react2.default.createElement(Textarea, _extends({}, input, props)) : _react2.default.createElement(Input, _extends({}, input, props)),
     _react2.default.createElement(
       Error,
       null,
