@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArrowButton renders correctly 1`] = `
+.c0 {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.75rem;
+  margin: 1rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02),0 1px 2px rgba(0,0,0,0.04);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+.c0::before {
+  content: '\\f100';
+  font-size: 0.875rem;
+  font-family: coder-icons;
+}
+
+.c0:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25),0 5px 5px rgba(0,0,0,0.10);
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`ArrowButton sets color correctly 1`] = `
+.c0 {
+  background-color: #0000FF;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.75rem;
+  margin: 1rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02),0 1px 2px rgba(0,0,0,0.04);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+.c0::before {
+  content: '\\f100';
+  font-size: 0.875rem;
+  font-family: coder-icons;
+}
+
+.c0:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25),0 5px 5px rgba(0,0,0,0.10);
+}
+
+<div
+  className="c0"
+  color="blue"
+/>
+`;
+
+exports[`ArrowButton swaps button styles correctly 1`] = `
+.c0 {
+  color: #0000FF;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.75rem;
+  margin: 1rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02),0 1px 2px rgba(0,0,0,0.04);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+.c0::before {
+  content: '\\f100';
+  font-size: 0.875rem;
+  font-family: coder-icons;
+}
+
+.c0:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25),0 5px 5px rgba(0,0,0,0.10);
+}
+
+<div
+  className="c0"
+  color="blue"
+/>
+`;

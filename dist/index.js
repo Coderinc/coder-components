@@ -1,8 +1,16 @@
 'use strict';
 
+var _templateObject = _taggedTemplateLiteral(['\n  @font-face {\n    font-family: circular;\n    font-weight: normal;\n    font-style: normal;\n    src: url(\'https://assets.builtbycoder.com/assets/circular-medium.otf\');\n  }\n\n  @font-face {\n    font-family: circular;\n    font-weight: normal;\n    font-style: italic;\n    src: url(\'https://assets.builtbycoder.com/assets/circular-medium-italic.otf\');\n  }\n\n  @font-face {\n    font-family: circular;\n    font-weight: lighter;\n    font-style: normal;\n    src: url(\'https://assets.builtbycoder.com/assets/circular-book.otf\');\n  }\n\n  @font-face {\n    font-family: circular;\n    font-weight: lighter;\n    font-style: italic;\n    src: url(\'https://assets.builtbycoder.com/assets/circular-book-italic.otf\');\n  }\n\n  @font-face {\n    font-family: circular;\n    font-weight: bold;\n    font-style: normal;\n    src: url(\'https://assets.builtbycoder.com/assets/circular-bold.otf\');\n  }\n\n  @font-face {\n    font-family: circular;\n    font-weight: bold;\n    font-style: italic;\n    src: url(\'https://assets.builtbycoder.com/assets/circular-bold-italic.otf\');\n  }\n\n  @font-face {\n    font-family: coder-icons;\n    font-weight: normal;\n    src: url(\'https://assets.builtbycoder.com/assets/coder-icons.ttf\');\n  }\n'], ['\n  @font-face {\n    font-family: circular;\n    font-weight: normal;\n    font-style: normal;\n    src: url(\'https://assets.builtbycoder.com/assets/circular-medium.otf\');\n  }\n\n  @font-face {\n    font-family: circular;\n    font-weight: normal;\n    font-style: italic;\n    src: url(\'https://assets.builtbycoder.com/assets/circular-medium-italic.otf\');\n  }\n\n  @font-face {\n    font-family: circular;\n    font-weight: lighter;\n    font-style: normal;\n    src: url(\'https://assets.builtbycoder.com/assets/circular-book.otf\');\n  }\n\n  @font-face {\n    font-family: circular;\n    font-weight: lighter;\n    font-style: italic;\n    src: url(\'https://assets.builtbycoder.com/assets/circular-book-italic.otf\');\n  }\n\n  @font-face {\n    font-family: circular;\n    font-weight: bold;\n    font-style: normal;\n    src: url(\'https://assets.builtbycoder.com/assets/circular-bold.otf\');\n  }\n\n  @font-face {\n    font-family: circular;\n    font-weight: bold;\n    font-style: italic;\n    src: url(\'https://assets.builtbycoder.com/assets/circular-bold-italic.otf\');\n  }\n\n  @font-face {\n    font-family: coder-icons;\n    font-weight: normal;\n    src: url(\'https://assets.builtbycoder.com/assets/coder-icons.ttf\');\n  }\n']);
+
+var _styledComponents = require('styled-components');
+
 var _Button = require('./elements/Button');
 
 var _Button2 = _interopRequireDefault(_Button);
+
+var _ArrowButton = require('./elements/ArrowButton');
+
+var _ArrowButton2 = _interopRequireDefault(_ArrowButton);
 
 var _DarkThemeProvider = require('./elements/DarkThemeProvider');
 
@@ -96,7 +104,13 @@ var _Comment2 = _interopRequireDefault(_Comment);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+// eslint-disable-next-line
+(0, _styledComponents.injectGlobal)(_templateObject);
+
 module.exports = {
+  ArrowButton: _ArrowButton2.default,
   TextInput: _TextInput2.default,
   SingleSelect: _Select.SingleSelect,
   Avatar: _Avatar2.default,
