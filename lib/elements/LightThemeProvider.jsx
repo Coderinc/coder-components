@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../../node_modules/styled-components';
+import { ThemeProvider } from 'styled-components';
 import lightThemeBase from '../styles/themes/lightTheme';
 import baseColors from '../styles/base-colors';
 

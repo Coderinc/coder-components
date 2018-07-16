@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Button = styled.div`
@@ -59,5 +60,17 @@ const Button = styled.div`
     box-shadow: ${({ disabled }) => (disabled ? undefined : '0 5px 10px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.10)')};
   }
 `;
+
+Button.propTypes = {
+  disabled: PropTypes.bool,
+  color: PropTypes.string,
+  reversed: PropTypes.bool,
+};
+
+Button.defaultProps = {
+  disabled: false,
+  color: 'primary',
+  reversed: false,
+};
 
 export default Button;

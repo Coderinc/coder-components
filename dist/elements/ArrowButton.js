@@ -4,6 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _styledComponents = require('styled-components');
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
@@ -54,5 +58,17 @@ var Button = _styledComponents2.default.div.withConfig({
   var disabled = _ref5.disabled;
   return disabled ? undefined : '0 5px 10px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.10)';
 });
+
+Button.propTypes = {
+  disabled: _propTypes2.default.bool,
+  color: _propTypes2.default.string,
+  reversed: _propTypes2.default.bool
+};
+
+Button.defaultProps = {
+  disabled: false,
+  color: 'primary',
+  reversed: false
+};
 
 exports.default = Button;
