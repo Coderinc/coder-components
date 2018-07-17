@@ -4,6 +4,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
 var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
@@ -13,6 +19,8 @@ var _styledComponents = require('styled-components');
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var Button = _styledComponents2.default.div.withConfig({
   displayName: 'Button'
@@ -59,16 +67,26 @@ var Button = _styledComponents2.default.div.withConfig({
   return disabled ? undefined : '0 5px 10px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.10)';
 });
 
-Button.propTypes = {
+var ArrowButton = function ArrowButton(_ref6) {
+  var disabled = _ref6.disabled,
+      onClick = _ref6.onClick,
+      props = _objectWithoutProperties(_ref6, ['disabled', 'onClick']);
+
+  return _react2.default.createElement(Button, _extends({ disabled: disabled, onClick: disabled ? undefined : onClick }, props));
+};
+
+ArrowButton.propTypes = {
   disabled: _propTypes2.default.bool,
   color: _propTypes2.default.string,
-  reversed: _propTypes2.default.bool
+  reversed: _propTypes2.default.bool,
+  onClick: _propTypes2.default.func
 };
 
-Button.defaultProps = {
+ArrowButton.defaultProps = {
   disabled: false,
   color: 'primary',
-  reversed: false
+  reversed: false,
+  onClick: undefined
 };
 
-exports.default = Button;
+exports.default = ArrowButton;

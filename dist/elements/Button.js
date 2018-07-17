@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -91,11 +93,13 @@ var ButtonDiv = _styledComponents2.default.div.withConfig({
 
 var Button = function Button(_ref13) {
   var label = _ref13.label,
-      props = _objectWithoutProperties(_ref13, ['label']);
+      disabled = _ref13.disabled,
+      onClick = _ref13.onClick,
+      props = _objectWithoutProperties(_ref13, ['label', 'disabled', 'onClick']);
 
   return _react2.default.createElement(
     ButtonDiv,
-    props,
+    _extends({}, props, { disabled: disabled, onClick: disabled ? undefined : onClick }),
     label
   );
 };
@@ -104,14 +108,18 @@ Button.propTypes = {
   label: _propTypes2.default.string,
   secondary: _propTypes2.default.bool,
   ternary: _propTypes2.default.bool,
-  color: _propTypes2.default.string
+  color: _propTypes2.default.string,
+  disabled: _propTypes2.default.bool,
+  onClick: _propTypes2.default.func
 };
 
 Button.defaultProps = {
   label: 'Click',
   secondary: false,
   ternary: false,
-  color: 'primary'
+  color: 'primary',
+  disabled: false,
+  onClick: undefined
 };
 
 exports.default = Button;

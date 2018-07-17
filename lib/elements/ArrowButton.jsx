@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -61,16 +62,22 @@ const Button = styled.div`
   }
 `;
 
-Button.propTypes = {
+const ArrowButton = ({ disabled, onClick, ...props }) => (
+  <Button disabled={disabled} onClick={disabled ? undefined : onClick} {...props} />
+);
+
+ArrowButton.propTypes = {
   disabled: PropTypes.bool,
   color: PropTypes.string,
   reversed: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
-Button.defaultProps = {
+ArrowButton.defaultProps = {
   disabled: false,
   color: 'primary',
   reversed: false,
+  onClick: undefined,
 };
 
-export default Button;
+export default ArrowButton;

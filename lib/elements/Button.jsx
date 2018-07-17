@@ -84,8 +84,8 @@ const ButtonDiv = styled.div`
   }
 `;
 
-const Button = ({ label, ...props }) => (
-  <ButtonDiv {...props}>
+const Button = ({ label, disabled, onClick, ...props }) => (
+  <ButtonDiv {...props} disabled={disabled} onClick={disabled ? undefined : onClick}>
     {label}
   </ButtonDiv>
 );
@@ -95,6 +95,8 @@ Button.propTypes = {
   secondary: PropTypes.bool,
   ternary: PropTypes.bool,
   color: PropTypes.string,
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
@@ -102,6 +104,8 @@ Button.defaultProps = {
   secondary: false,
   ternary: false,
   color: 'primary',
+  disabled: false,
+  onClick: undefined,
 };
 
 export default Button;
