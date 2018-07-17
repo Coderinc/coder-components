@@ -78,7 +78,8 @@ var Tile = function Tile(_ref5) {
 Tile.propTypes = {
   active: _propTypes2.default.bool,
   onClick: _propTypes2.default.func,
-  value: _propTypes2.default.oneOf([_propTypes2.default.number, _propTypes2.default.string]),
+  // eslint-disable-next-line
+  value: _propTypes2.default.any,
   icon: _propTypes2.default.string,
   label: _propTypes2.default.string
 };

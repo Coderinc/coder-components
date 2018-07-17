@@ -70,7 +70,7 @@ var Textarea = _styledComponents2.default.textarea.withConfig({
 
 var Error = _styledComponents2.default.span.withConfig({
   displayName: 'Error'
-})(['color:', ';font-size:0.625rem;font-weight:lighter;line-height:1rem;width:100%;'], function (_ref11) {
+})(['color:', ';font-size:0.75rem;font-weight:lighter;line-height:1rem;width:100%;height:1rem;'], function (_ref11) {
   var theme = _ref11.theme;
   return theme.pink;
 });

@@ -64,7 +64,8 @@ const Tile = ({
 Tile.propTypes = {
   active: PropTypes.bool,
   onClick: PropTypes.func,
-  value: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
+  // eslint-disable-next-line
+  value: PropTypes.any,
   icon: PropTypes.string,
   label: PropTypes.string,
 };

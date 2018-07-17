@@ -55,10 +55,11 @@ const Textarea = styled.textarea`
 
 const Error = styled.span`
   color: ${({ theme }) => theme.pink};
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   font-weight: lighter;
   line-height: 1rem;
   width: 100%;
+  height: 1rem;
 `;
 
 const TextInput = ({
