@@ -17,8 +17,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Paragraph = _styledComponents2.default.p.withConfig({
   displayName: 'Paragraph'
 })(['color:', ';font-size:0.875rem;line-height:1.25rem;font-weight:', ';'], function (_ref) {
-  var theme = _ref.theme;
-  return theme.primaryFont;
+  var theme = _ref.theme,
+      color = _ref.color;
+  return color ? theme[color] : theme.primaryFont;
 }, function (_ref2) {
   var bold = _ref2.bold;
   return bold ? 'bold' : 'lighter';

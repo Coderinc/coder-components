@@ -17,8 +17,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var H4 = _styledComponents2.default.h4.withConfig({
   displayName: 'H4'
 })(['color:', ';font-size:1rem;line-height:1.5rem;font-weight:', ';'], function (_ref) {
-  var theme = _ref.theme;
-  return theme.primaryFont;
+  var theme = _ref.theme,
+      color = _ref.color;
+  return color ? theme[color] : theme.primaryFont;
 }, function (_ref2) {
   var light = _ref2.light;
   return light ? 'lighter' : 'bold';

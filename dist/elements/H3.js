@@ -17,19 +17,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var H3 = _styledComponents2.default.h3.withConfig({
   displayName: 'H3'
 })(['color:', ';font-size:1.25rem;line-height:2rem;font-weight:', ';'], function (_ref) {
-  var theme = _ref.theme;
-  return theme.primaryFont;
+  var theme = _ref.theme,
+      color = _ref.color;
+  return color ? theme[color] : theme.primaryFont;
 }, function (_ref2) {
   var light = _ref2.light;
   return light ? 'lighter' : 'bold';
 });
 
 H3.propTypes = {
-  light: _propTypes2.default.bool
+  light: _propTypes2.default.bool,
+  color: _propTypes2.default.string
 };
 
 H3.defaultProps = {
-  light: false
+  light: false,
+  color: undefined
 };
 
 exports.default = H3;
